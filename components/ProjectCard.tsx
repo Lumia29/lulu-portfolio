@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 import type { Project } from "@/data/siteContent";
 
 type ProjectCardProps = {
@@ -20,6 +22,9 @@ export function ProjectCard({ project }: ProjectCardProps) {
           </span>
         ))}
       </div>
+      <Link href={`/projects/${project.slug}`} className="project-link">
+        查看详情
+      </Link>
     </article>
   );
 }

@@ -26,13 +26,13 @@ export function ContactPanel() {
         <div className="qr-frame">
           <Image
             src="/wechat-placeholder.svg"
-            alt="微信二维码占位图"
+            alt="微信联系占位图"
             width={260}
             height={260}
             priority
           />
         </div>
-        <p className="qr-caption">扫码添加微信，后续可替换为你的真实二维码。</p>
+        <p className="qr-caption">微信号：{contact.wechatHint}，后续可替换为你的真实二维码。</p>
       </article>
     </div>
   );

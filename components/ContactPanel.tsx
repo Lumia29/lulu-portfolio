@@ -19,12 +19,6 @@ export function ContactPanel() {
             <span>邮箱</span>
             <a href={`mailto:${contact.email}`}>{contact.email}</a>
           </div>
-          <div className="contact-row">
-            <span>GitHub</span>
-            <a href={contact.github} target="_blank" rel="noreferrer">
-              查看仓库
-            </a>
-          </div>
         </div>
         <div className="hero-actions">
           <a href={contact.resumeLink} className="button button-primary">

@@ -1,19 +1,16 @@
 import Link from "next/link";
 
-import { siteMeta } from "@/data/siteContent";
-
 export function HeroSection() {
   return (
     <section className="hero-section">
       <div className="container hero-grid">
         <div className="hero-copy">
           <span className="hero-kicker">MODEL OPS TO AI PRODUCT EXPLORER</span>
-          <h1>
-            嗨，我是刘露露 <span>👋</span>
-            <br />
-            正在探索 AI 产品
-          </h1>
-          <p>{siteMeta.description}</p>
+          <h1>嗨，我是刘露露👋🏻</h1>
+          <p>
+            在字节做广告安全治理，在阿里搞 AIGC 工具，现在想用 AI 让工作更性感。设计本硕出身，却爱上了写
+            Prompt 和搭 Workflow，因为好看又好用，才是真的好用。
+          </p>
           <div className="hero-actions">
             <Link href="/projects" className="button button-primary">
               看看我的项目

@@ -19,8 +19,8 @@ export default function HomePage() {
         <div className="container">
           <SectionHeading
             eyebrow="Highlights"
-            title="三种能力，组成我做 AI 产品的底盘"
-            description="先快速讲清楚我是谁、擅长什么，以及为什么值得继续往下看。"
+            title="把复杂 AI 工作，做成有结果的方案"
+            description="我擅长在模型能力、业务问题和产品体验之间找平衡，既能把指标拉起来，也能把策略讲清楚。"
           />
           <div className="highlights-grid">
             {highlights.map((item) => (
@@ -35,7 +35,7 @@ export default function HomePage() {
           <div>
             <SectionHeading
               eyebrow="About"
-              title="设计出身，但现在更着迷于让 AI 真正接上业务和体验"
+              title="设计背景，在 AI 与产品之间搭桥"
               description={about.intro}
             />
             <article className="about-copy-card surface-card">
@@ -65,7 +65,7 @@ export default function HomePage() {
           <SectionHeading
             eyebrow="Projects"
             title="项目案例"
-            description="先快速扫过方向，再进入详情页看完整背景、动作和结果。"
+            description="这些项目覆盖风险治理、AIGC 产品与增长场景，核心是把 AI 能力变成可执行的业务方案。"
           />
           <div className="projects-grid">
             {projects.map((project) => (
@@ -81,7 +81,7 @@ export default function HomePage() {
             <SectionHeading
               eyebrow="Experiments"
               title="把新工具先放进自己的工作流里跑通"
-              description="我更关心它替代了什么、节省了什么、下一步会长成什么。"
+              description="我会把新工具和新想法先放进自己的工作流里跑通，再决定它值不值得走向更大的场景。"
             />
             <Link href="/experiments" className="button button-secondary inline-button">
               看完整实验记录
@@ -99,7 +99,7 @@ export default function HomePage() {
         <div className="container">
           <SectionHeading
             eyebrow="Contact"
-            title="如果你也在做 AI 产品、增长或工作流创新，可以来聊"
+            title="欢迎联系，交流学习~"
             description="轻松一点，但信息要足够清楚。"
           />
           <ContactPanel />

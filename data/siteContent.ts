@@ -51,7 +51,7 @@ export const siteMeta = {
   wechat: "uulllllluu",
   title: "模型运营出身，正在探索 AI 产品，把复杂问题做成又好看又好用的体验。",
   description:
-    "在字节做广告安全治理，在阿里搞 AIGC 工具，现在想用 AI 让工作更性感。设计本硕出身，却爱上了写 Prompt 和搭 Workflow。",
+    "在字节做广告安全治理，在阿里做 AIGC 工具，正在把模型运营经验长成 AI 产品能力。",
 };
 
 export const navigation: NavItem[] = [
@@ -98,10 +98,10 @@ export const highlights: Highlight[] = [
 
 export const about = {
   intro:
-    "我不是那种只会执行的运营。我会蹲在业务里钓黑灰产、看审核员怎么审核，也会借助 AI 写代码清洗脏数据；会用 Prompt 把大模型调教得服帖，也会回到用户体验本身，问一句：这个功能真的让人爽了吗？",
+    "我不只做执行，更习惯把业务问题拆开、把 AI 能力接上真实体验。会看审核现场，也会写 Prompt、搭 Workflow，最后回到一句话：这个功能到底让人爽了吗？",
   education: "设计本硕背景（工业设计 × 产品设计），7 年设计训练带来的不是画图能力，而是对人性和美的直觉。",
   philosophy:
-    "好的 AI 产品，不是炫技，而是让人忘记技术的存在。转型不是从零开始，而是把过去的积累重新组合。",
+    "好的 AI 产品，不是炫技，而是让人忘记技术的存在。",
   experiences: [
     {
       company: "字节跳动",

@@ -67,14 +67,6 @@ export function SkillRadar({ items }: SkillRadarProps) {
           return <circle key={item.label} cx={x} cy={y} r="5" className="radar-dot" />;
         })}
       </svg>
-      <div className="radar-legend">
-        {items.map((item) => (
-          <div key={item.label} className="legend-row">
-            <span>{item.label}</span>
-            <strong>{item.score.toFixed(1)}</strong>
-          </div>
-        ))}
-      </div>
     </div>
   );
 }

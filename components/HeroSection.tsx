@@ -11,7 +11,7 @@ export function HeroSection() {
           <h1>
             嗨，我是刘露露 <span>👋</span>
             <br />
-            一个正在探索 AI 产品的模型运营
+            正在探索 AI 产品
           </h1>
           <p>{siteMeta.description}</p>
           <div className="hero-actions">
@@ -57,7 +57,7 @@ export function HeroSection() {
                 <span className="dot c" />
               </div>
               <h3>把复杂 AI 工作做成清晰、靠谱、能落地的方案</h3>
-              <p>从审核治理到 AIGC 工具，再到个人 Agent 实验，我在搭桥：让模型能力真正接上业务和体验。</p>
+              <p>让模型能力真正接上业务和体验。</p>
             </div>
             <div className="hero-card hero-note bottom-left">
               <span>OpenClaw</span>

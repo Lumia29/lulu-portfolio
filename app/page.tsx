@@ -20,7 +20,7 @@ export default function HomePage() {
           <SectionHeading
             eyebrow="Highlights"
             title="三种能力，组成我做 AI 产品的底盘"
-            description="V2 版本把核心信息收得更紧一些，让用户先快速理解你是谁、你擅长什么、你为什么值得继续往下看。"
+            description="先快速讲清楚我是谁、擅长什么，以及为什么值得继续往下看。"
           />
           <div className="highlights-grid">
             {highlights.map((item) => (
@@ -65,7 +65,7 @@ export default function HomePage() {
           <SectionHeading
             eyebrow="Projects"
             title="项目案例"
-            description="项目区用更清晰的卡片网格承接内容。先让浏览者快速扫过方向，再进入详情页看完整背景、动作和结果。"
+            description="先快速扫过方向，再进入详情页看完整背景、动作和结果。"
           />
           <div className="projects-grid">
             {projects.map((project) => (
@@ -81,7 +81,7 @@ export default function HomePage() {
             <SectionHeading
               eyebrow="Experiments"
               title="把新工具先放进自己的工作流里跑通"
-              description="相比把实验写得很玄，我更想展示它到底替代了什么、节省了什么、下一步要长成什么。"
+              description="我更关心它替代了什么、节省了什么、下一步会长成什么。"
             />
             <Link href="/experiments" className="button button-secondary inline-button">
               看完整实验记录
@@ -100,7 +100,7 @@ export default function HomePage() {
           <SectionHeading
             eyebrow="Contact"
             title="如果你也在做 AI 产品、增长或工作流创新，可以来聊"
-            description="这一版 Contact 更像一张有温度的名片，不需要太正式，但要足够清楚。"
+            description="轻松一点，但信息要足够清楚。"
           />
           <ContactPanel />
         </div>

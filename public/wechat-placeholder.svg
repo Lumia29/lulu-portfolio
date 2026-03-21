@@ -1,0 +1,22 @@
+<svg width="320" height="320" viewBox="0 0 320 320" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="320" height="320" rx="36" fill="#FFF7F2"/>
+  <rect x="24" y="24" width="272" height="272" rx="28" fill="white" stroke="#E9DDFB" stroke-width="4"/>
+  <rect x="52" y="52" width="60" height="60" rx="8" fill="#8B5CF6"/>
+  <rect x="64" y="64" width="36" height="36" rx="4" fill="white"/>
+  <rect x="208" y="52" width="60" height="60" rx="8" fill="#F97316"/>
+  <rect x="220" y="64" width="36" height="36" rx="4" fill="white"/>
+  <rect x="52" y="208" width="60" height="60" rx="8" fill="#F97316"/>
+  <rect x="64" y="220" width="36" height="36" rx="4" fill="white"/>
+  <rect x="138" y="136" width="16" height="16" rx="4" fill="#8B5CF6"/>
+  <rect x="162" y="136" width="16" height="16" rx="4" fill="#F97316"/>
+  <rect x="186" y="136" width="16" height="16" rx="4" fill="#8B5CF6"/>
+  <rect x="138" y="160" width="16" height="16" rx="4" fill="#F97316"/>
+  <rect x="186" y="160" width="16" height="16" rx="4" fill="#F97316"/>
+  <rect x="162" y="184" width="16" height="16" rx="4" fill="#8B5CF6"/>
+  <rect x="210" y="184" width="16" height="16" rx="4" fill="#8B5CF6"/>
+  <rect x="234" y="160" width="16" height="16" rx="4" fill="#F97316"/>
+  <rect x="234" y="208" width="16" height="16" rx="4" fill="#8B5CF6"/>
+  <path d="M138 246H249" stroke="#DDD2F7" stroke-width="10" stroke-linecap="round"/>
+  <path d="M138 222H177" stroke="#F8C8A8" stroke-width="10" stroke-linecap="round"/>
+  <text x="160" y="292" text-anchor="middle" fill="#6B5A84" font-family="Arial, sans-serif" font-size="16">WeChat QR Placeholder</text>
+</svg>

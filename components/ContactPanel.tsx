@@ -6,10 +6,7 @@ export function ContactPanel() {
       <article className="contact-card surface-card">
         <span className="section-eyebrow">Let&apos;s Talk</span>
         <h3>想聊 AI 产品的可能性，或者单纯想交个朋友？</h3>
-        <p>
-          对我的经历、项目或转型路径感兴趣，都欢迎联系我。你也可以把这里当成一个轻松的 coffee
-          chat 入口。
-        </p>
+        <p>对我的经历、项目或转型路径感兴趣，都欢迎联系我。</p>
         <div className="contact-list">
           <div className="contact-row">
             <span>微信</span>
@@ -19,14 +16,6 @@ export function ContactPanel() {
             <span>邮箱</span>
             <a href={`mailto:${contact.email}`}>{contact.email}</a>
           </div>
-        </div>
-        <div className="hero-actions">
-          <a href={contact.resumeLink} className="button button-primary">
-            下载我的简历 PDF
-          </a>
-          <a href={contact.coffeeLink} className="button button-secondary">
-            预约一个 15 分钟的咖啡聊
-          </a>
         </div>
       </article>
 

@@ -88,7 +88,7 @@ export default function HomePage() {
             </Link>
           </div>
           <div className="stack-grid">
-            {experiments.map((experiment) => (
+            {experiments.slice(0, 1).map((experiment) => (
               <ExperimentCard key={experiment.title} experiment={experiment} />
             ))}
           </div>

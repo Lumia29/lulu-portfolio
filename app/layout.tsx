@@ -7,15 +7,17 @@ import { siteMeta } from "@/data/siteContent";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: `${siteMeta.name} | AI Portfolio`,
-  description: siteMeta.title,
+  title: `${siteMeta.name} | AI Product Portfolio`,
+  description: siteMeta.description,
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="zh-CN">
       <body>
-        <div className="page-bg" />
+        <div className="site-noise" />
+        <div className="site-gradient site-gradient-a" />
+        <div className="site-gradient site-gradient-b" />
         <NavBar />
         <main>{children}</main>
         <SiteFooter />

@@ -9,7 +9,7 @@ export default function ProjectsPage() {
         <SectionHeading
           eyebrow="Projects"
           title="项目案例"
-          description="每个项目都围绕一个明确目标展开：要么提升识别效果，要么压缩成本，要么把混乱的流程变成可运营的系统。"
+          description="项目页保持信息密度，但通过封面图、标签和详情入口拉开节奏。这样浏览体验不会像在看简历截图。"
         />
         <div className="projects-grid">
           {projects.map((project) => (

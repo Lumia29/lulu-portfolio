@@ -1,38 +1,53 @@
-import Image from "next/image";
-
 import { contact } from "@/data/siteContent";
 
 export function ContactPanel() {
   return (
     <div className="contact-layout">
-      <article className="surface-card contact-card">
-        <span className="section-eyebrow">Direct</span>
-        <h3>联系我</h3>
-        <p>适合聊 AI 风险治理、AIGC 产品、Agent 工作流、增长协作和新的产品机会。</p>
+      <article className="contact-card surface-card">
+        <span className="section-eyebrow">Let&apos;s Talk</span>
+        <h3>想聊 AI 产品的可能性，或者单纯想交个朋友？</h3>
+        <p>
+          对我的经历、项目或转型路径感兴趣，都欢迎联系我。你也可以把这里当成一个轻松的 coffee
+          chat 入口。
+        </p>
         <div className="contact-list">
-          <a href={`mailto:${contact.email}`}>{contact.email}</a>
-          <p>微信：{contact.wechatHint}</p>
+          <div className="contact-row">
+            <span>微信</span>
+            <strong>{contact.wechat}</strong>
+          </div>
+          <div className="contact-row">
+            <span>邮箱</span>
+            <a href={`mailto:${contact.email}`}>{contact.email}</a>
+          </div>
+          <div className="contact-row">
+            <span>GitHub</span>
+            <a href={contact.github} target="_blank" rel="noreferrer">
+              查看仓库
+            </a>
+          </div>
         </div>
         <div className="hero-actions">
           <a href={contact.resumeLink} className="button button-primary">
-            下载简历 PDF
+            下载我的简历 PDF
           </a>
           <a href={contact.coffeeLink} className="button button-secondary">
-            预约咖啡聊
+            预约一个 15 分钟的咖啡聊
           </a>
         </div>
       </article>
-      <article className="surface-card qr-card">
-        <div className="qr-frame">
-          <Image
-            src="/wechat-placeholder.svg"
-            alt="微信二维码占位图"
-            width={260}
-            height={260}
-            priority
-          />
+
+      <article className="wechat-card surface-card">
+        <span className="section-eyebrow">WeChat</span>
+        <div className="wechat-badge">
+          <div className="wechat-circle" />
+          <div className="wechat-copy">
+            <strong>{contact.wechat}</strong>
+            <span>现在先用微信号直达，后续可替换成二维码卡片。</span>
+          </div>
         </div>
-        <p className="qr-caption">扫码添加微信，后续可替换为你的真实二维码。</p>
+        <div className="wechat-note">
+          <p>如果你更习惯异步沟通，也可以直接发邮件。我会把这个站点持续当成个人实验场更新。</p>
+        </div>
       </article>
     </div>
   );

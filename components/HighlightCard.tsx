@@ -1,15 +1,24 @@
 import type { Highlight } from "@/data/siteContent";
 
+import { HighlightIcon } from "@/components/Illustrations";
+
 type HighlightCardProps = {
   item: Highlight;
 };
 
 export function HighlightCard({ item }: HighlightCardProps) {
   return (
-    <article className="feature-card surface-card">
-      <span className="feature-pill">{item.metric}</span>
+    <article className="highlight-card surface-card">
+      <div className="highlight-top">
+        <HighlightIcon kind={item.id} />
+        <span className="metric-chip">{item.metric}</span>
+      </div>
       <h3>{item.title}</h3>
-      <p>{item.description}</p>
+      <ul className="bullet-list">
+        {item.bullets.map((bullet) => (
+          <li key={bullet}>{bullet}</li>
+        ))}
+      </ul>
     </article>
   );
 }

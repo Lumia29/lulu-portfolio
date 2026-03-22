@@ -325,6 +325,7 @@ export const blogTopics = [
 
 export const contact = {
   email: siteMeta.email,
+  phone: "15271818824",
   wechat: siteMeta.wechat,
   coffeeLink: "mailto:henry135235@gmail.com?subject=%E9%A2%84%E7%BA%A6%2015%20%E5%88%86%E9%92%9F%E5%92%96%E5%95%A1%E8%81%8A",
   resumeLink: "/resume.pdf",

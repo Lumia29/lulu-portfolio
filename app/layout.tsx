@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 
 import { NavBar } from "@/components/NavBar";
+import { ParallaxScene } from "@/components/ParallaxScene";
 import { SiteFooter } from "@/components/SiteFooter";
 import { siteMeta } from "@/data/siteContent";
 
@@ -15,6 +16,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
   return (
     <html lang="zh-CN">
       <body>
+        <ParallaxScene />
         <div className="site-noise" />
         <div className="site-gradient site-gradient-a" />
         <div className="site-gradient site-gradient-b" />

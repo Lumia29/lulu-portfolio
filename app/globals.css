@@ -12,6 +12,7 @@
   --accent-pink: #d96d91;
   --mint: #50a89d;
   --shadow: 0 24px 60px rgba(88, 112, 216, 0.12);
+  --focus-ring: rgba(88, 112, 216, 0.26);
   --radius-xl: 36px;
   --radius-lg: 28px;
   --radius-md: 20px;
@@ -41,9 +42,20 @@ body {
   text-rendering: optimizeLegibility;
 }
 
+::selection {
+  color: #fff;
+  background: rgba(88, 112, 216, 0.78);
+}
+
 a {
   color: inherit;
   text-decoration: none;
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid var(--focus-ring);
+  outline-offset: 4px;
 }
 
 img,
@@ -130,6 +142,11 @@ main {
   border-radius: 999px;
   background: rgba(255, 255, 255, 0.7);
   box-shadow: 0 10px 40px rgba(88, 112, 216, 0.08);
+  transition:
+    transform 220ms cubic-bezier(0.2, 0.8, 0.2, 1),
+    box-shadow 220ms ease,
+    background-color 220ms ease,
+    border-color 220ms ease;
 }
 
 .nav-top {
@@ -207,6 +224,10 @@ main {
   color: var(--muted);
   font-family: "Inter", "Avenir Next", sans-serif;
   font-size: 0.92rem;
+  transition:
+    transform 180ms cubic-bezier(0.2, 0.8, 0.2, 1),
+    color 180ms ease,
+    background-color 180ms ease;
 }
 
 .nav-link:hover {
@@ -411,6 +432,11 @@ main {
   border-radius: 22px;
   background: rgba(255, 255, 255, 0.76);
   box-shadow: 0 18px 40px rgba(88, 112, 216, 0.08);
+  transition:
+    transform 220ms cubic-bezier(0.2, 0.8, 0.2, 1),
+    box-shadow 220ms ease,
+    border-color 220ms ease,
+    background-color 220ms ease;
 }
 
 .hero-credential-item span {
@@ -442,6 +468,11 @@ main {
   background: rgba(255, 255, 255, 0.74);
   border: 1px solid rgba(255, 255, 255, 0.85);
   box-shadow: var(--shadow);
+  transition:
+    transform 220ms cubic-bezier(0.2, 0.8, 0.2, 1),
+    box-shadow 220ms ease,
+    border-color 220ms ease,
+    background-color 220ms ease;
 }
 
 .hero-mini-stats strong {
@@ -467,6 +498,12 @@ main {
   border-radius: 999px;
   border: 1px solid transparent;
   font-weight: 700;
+  transition:
+    transform 180ms cubic-bezier(0.2, 0.8, 0.2, 1),
+    box-shadow 180ms ease,
+    border-color 180ms ease,
+    background-color 180ms ease,
+    color 180ms ease;
 }
 
 .button:hover,
@@ -513,6 +550,11 @@ main {
     linear-gradient(180deg, rgba(255, 255, 255, 0.94), rgba(247, 248, 255, 0.84));
   border: 1px solid rgba(255, 255, 255, 0.8);
   box-shadow: var(--shadow);
+  transition:
+    transform 260ms cubic-bezier(0.2, 0.8, 0.2, 1),
+    box-shadow 260ms ease,
+    border-color 260ms ease,
+    background-color 260ms ease;
 }
 
 .hero-photo-frame {
@@ -526,6 +568,10 @@ main {
   box-shadow: 0 22px 46px rgba(88, 112, 216, 0.14);
   animation: hero-photo-in 900ms cubic-bezier(0.2, 0.8, 0.2, 1) 180ms both;
   transform-origin: center center;
+  transition:
+    transform 260ms cubic-bezier(0.2, 0.8, 0.2, 1),
+    box-shadow 260ms ease,
+    filter 260ms ease;
 }
 
 .hero-photo {
@@ -544,6 +590,10 @@ main {
   border-radius: 20px;
   background: rgba(255, 255, 255, 0.82);
   backdrop-filter: blur(16px);
+  transition:
+    transform 220ms cubic-bezier(0.2, 0.8, 0.2, 1),
+    background-color 220ms ease,
+    box-shadow 220ms ease;
 }
 
 .hero-photo-note span,
@@ -568,6 +618,11 @@ main {
   border-radius: 20px;
   background: rgba(255, 255, 255, 0.68);
   border: 1px solid rgba(107, 118, 179, 0.12);
+  transition:
+    transform 220ms cubic-bezier(0.2, 0.8, 0.2, 1),
+    background-color 220ms ease,
+    border-color 220ms ease,
+    box-shadow 220ms ease;
 }
 
 .hero-stage-caption p {
@@ -604,9 +659,73 @@ main {
   background: var(--surface);
   backdrop-filter: blur(18px);
   box-shadow: var(--shadow);
+  transition:
+    transform 240ms cubic-bezier(0.2, 0.8, 0.2, 1),
+    box-shadow 240ms ease,
+    border-color 240ms ease,
+    background-color 240ms ease;
+}
+
+.surface-card:focus-within {
+  transform: translateY(-4px);
+  border-color: rgba(88, 112, 216, 0.2);
+  box-shadow: 0 30px 72px rgba(88, 112, 216, 0.18);
 }
 
 @media (hover: hover) {
+  .nav-shell:hover {
+    transform: translateY(-1px);
+    border-color: rgba(255, 255, 255, 0.9);
+    background: rgba(255, 255, 255, 0.78);
+    box-shadow: 0 16px 44px rgba(88, 112, 216, 0.12);
+  }
+
+  .nav-link:hover {
+    transform: translateY(-1px);
+  }
+
+  .button-primary:hover {
+    box-shadow: 0 22px 34px rgba(88, 112, 216, 0.28);
+  }
+
+  .button-secondary:hover {
+    border-color: rgba(88, 112, 216, 0.22);
+    background: rgba(255, 255, 255, 0.92);
+  }
+
+  .hero-stage:hover {
+    transform: translateY(-6px);
+    border-color: rgba(255, 255, 255, 0.9);
+    box-shadow:
+      0 34px 82px rgba(88, 112, 216, 0.18),
+      0 12px 30px rgba(88, 112, 216, 0.12);
+  }
+
+  .hero-stage:hover .hero-photo-frame {
+    transform: scale(1.012);
+    filter: saturate(1.03);
+    box-shadow: 0 28px 58px rgba(88, 112, 216, 0.18);
+  }
+
+  .hero-stage:hover .hero-photo-note,
+  .hero-stage:hover .hero-stage-caption {
+    transform: translateY(-2px);
+    background: rgba(255, 255, 255, 0.88);
+    box-shadow: 0 16px 34px rgba(88, 112, 216, 0.1);
+  }
+
+  .hero-stage:hover .hero-stage-caption {
+    border-color: rgba(88, 112, 216, 0.16);
+  }
+
+  .hero-credential-item:hover,
+  .hero-mini-stats div:hover {
+    transform: translateY(-3px);
+    border-color: rgba(88, 112, 216, 0.18);
+    background: rgba(255, 255, 255, 0.86);
+    box-shadow: 0 22px 48px rgba(88, 112, 216, 0.12);
+  }
+
   .surface-card:hover {
     transform: translateY(-4px);
     border-color: rgba(88, 112, 216, 0.2);
@@ -652,6 +771,63 @@ main {
   .project-card:hover h3 {
     color: var(--primary-strong);
   }
+
+  .highlight-card:hover,
+  .experiment-card:hover {
+    transform: translateY(-7px) scale(1.006);
+    border-color: rgba(88, 112, 216, 0.22);
+    box-shadow:
+      0 34px 76px rgba(88, 112, 216, 0.18),
+      0 10px 24px rgba(88, 112, 216, 0.1);
+  }
+
+  .highlight-card:hover .highlight-top,
+  .experiment-card:hover .experiment-head {
+    transform: translateY(-3px);
+  }
+
+  .highlight-card:hover .metric-chip,
+  .experiment-card:hover .status-chip {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 28px rgba(88, 112, 216, 0.14);
+  }
+
+  .highlight-card:hover h3,
+  .experiment-card:hover h3,
+  .contact-card:hover h3,
+  .wechat-card:hover strong,
+  .trajectory-card:hover .trajectory-title,
+  .profile-story-card:hover .profile-lead {
+    color: var(--primary-strong);
+  }
+
+  .profile-story-card:hover,
+  .trajectory-card:hover,
+  .radar-card:hover,
+  .contact-card:hover,
+  .wechat-card:hover {
+    border-color: rgba(88, 112, 216, 0.18);
+    box-shadow:
+      0 28px 66px rgba(88, 112, 216, 0.16),
+      0 8px 22px rgba(88, 112, 216, 0.08);
+  }
+
+  .profile-story-card:hover::before {
+    opacity: 1;
+    transform: scaleX(1.04);
+  }
+
+  .trajectory-card:hover .trajectory-item,
+  .contact-card:hover .contact-row,
+  .wechat-card:hover .wechat-badge,
+  .portrait-panel:hover .portrait-fact {
+    transform: translateY(-2px);
+  }
+
+  .contact-card:hover .contact-row,
+  .wechat-card:hover .wechat-badge {
+    background: rgba(255, 255, 255, 0.78);
+  }
 }
 
 .highlights-grid,
@@ -670,6 +846,7 @@ main {
   justify-content: space-between;
   gap: 18px;
   margin-bottom: 18px;
+  transition: transform 240ms cubic-bezier(0.2, 0.8, 0.2, 1), filter 240ms ease;
 }
 
 .icon-graphic {
@@ -685,6 +862,10 @@ main {
   text-transform: none;
   letter-spacing: 0;
   white-space: nowrap;
+  transition:
+    transform 220ms cubic-bezier(0.2, 0.8, 0.2, 1),
+    box-shadow 220ms ease,
+    background-color 220ms ease;
 }
 
 .highlight-card h3,
@@ -748,6 +929,9 @@ main {
   inset: 0 0 auto 0;
   height: 1px;
   background: linear-gradient(90deg, rgba(88, 112, 216, 0.24), rgba(242, 140, 111, 0));
+  opacity: 0.84;
+  transform-origin: left center;
+  transition: opacity 220ms ease, transform 220ms ease;
 }
 
 .profile-lead {
@@ -828,6 +1012,7 @@ main {
   padding: 14px 16px;
   border-radius: 20px;
   background: rgba(255, 255, 255, 0.5);
+  transition: transform 220ms cubic-bezier(0.2, 0.8, 0.2, 1), background-color 220ms ease;
 }
 
 .portrait-fact strong {
@@ -949,6 +1134,7 @@ main {
   color: var(--text);
   background: rgba(255, 255, 255, 0.78);
   backdrop-filter: blur(10px);
+  transition: background-color 220ms ease, border-color 220ms ease;
 }
 
 .project-body {
@@ -1042,12 +1228,17 @@ main {
   justify-content: space-between;
   gap: 18px;
   margin-bottom: 10px;
+  transition: transform 240ms cubic-bezier(0.2, 0.8, 0.2, 1), filter 240ms ease;
 }
 
 .status-chip {
   padding: 10px 14px;
   background: rgba(81, 108, 98, 0.1);
   color: var(--mint);
+  transition:
+    transform 220ms cubic-bezier(0.2, 0.8, 0.2, 1),
+    box-shadow 220ms ease,
+    background-color 220ms ease;
 }
 
 .experiment-columns {
@@ -1089,6 +1280,10 @@ main {
   padding: 14px 16px;
   border-radius: 18px;
   background: rgba(255, 255, 255, 0.62);
+  transition:
+    transform 220ms cubic-bezier(0.2, 0.8, 0.2, 1),
+    background-color 220ms ease,
+    box-shadow 220ms ease;
 }
 
 .contact-row span {
@@ -1108,6 +1303,10 @@ main {
   padding: 18px;
   border-radius: 24px;
   background: linear-gradient(135deg, rgba(88, 112, 216, 0.1), rgba(242, 140, 111, 0.12));
+  transition:
+    transform 220ms cubic-bezier(0.2, 0.8, 0.2, 1),
+    background-color 220ms ease,
+    box-shadow 220ms ease;
 }
 
 .wechat-circle {
@@ -1189,6 +1388,7 @@ main {
   padding: 2px 0 0 16px;
   border-top: 0;
   border-left: 2px solid rgba(88, 112, 216, 0.14);
+  transition: transform 220ms cubic-bezier(0.2, 0.8, 0.2, 1), border-color 220ms ease;
 }
 
 .trajectory-item:first-child {

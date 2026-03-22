@@ -915,6 +915,13 @@ main {
   margin-top: 22px;
 }
 
+.contact-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 22px;
+}
+
 .contact-row {
   display: flex;
   align-items: center;

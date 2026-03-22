@@ -49,9 +49,9 @@ export const siteMeta = {
   name: "刘露露",
   email: "henry135235@gmail.com",
   wechat: "uulllllluu",
-  title: "字节跳动模型运营，持续探索 AI 产品与复杂系统的落地表达。",
+  title: "字节跳动模型运营，正转向 AI 产品方向。",
   description:
-    "做过广告安全治理、Agent 自动化与 AIGC 产品优化，关注把复杂 AI 能力转成清晰、可用、可落地的产品体验。",
+    "做过广告安全治理、AIGC 产品优化、增长与用户运营，正在把复杂系统经验迁移到 AI 产品方向。",
 };
 
 export const navigation: NavItem[] = [
@@ -97,9 +97,9 @@ export const highlights: Highlight[] = [
 
 export const about = {
   intro:
-    "我现在的岗位更接近模型运营，但做事方式一直偏产品。面对复杂问题，我习惯先定义场景和判断标准，再决定该用模型、规则还是流程解决。",
+    "我目前在字节做模型运营，也正在把重心转向 AI 产品方向。面对复杂问题，我习惯先定义场景和判断标准，再决定该用模型、规则还是流程解决。",
   education:
-    "设计本硕背景给了我审美和用户感知，字节与阿里的经历让我学会用数据、评测和落地结果说话。",
+    "设计本硕背景给了我审美和用户感知，蔚来和长亭补上了业务现场与增长视角，阿里和字节让我学会用数据、评测和落地结果说话。",
   philosophy: "好的 AI 产品，不是把技术堆给用户，而是让复杂度在背后被消化。",
   experiences: [
     {

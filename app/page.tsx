@@ -36,11 +36,11 @@ export default function HomePage() {
       <section className="section-block">
         <div className="container about-preview-grid">
           <div>
-            <SectionHeading
-              eyebrow="About"
-              title="设计背景，让我既看体验，也看落地"
-              description="我做过模型运营、AIGC 产品评测和增长项目，但方法始终是一致的：先把问题拆清楚，再决定该用什么能力解决。"
-            />
+          <SectionHeading
+            eyebrow="About"
+            title="设计背景，让我既看体验，也看落地"
+            description="从设计训练到用户运营、增长、AIGC 评测再到模型运营，这条路径一直在把体验判断、业务理解和复杂系统落地慢慢接到一起。"
+          />
             <article className="about-copy-card profile-story-card surface-card">
               <p className="profile-lead">{about.intro}</p>
               <p>{about.education}</p>
@@ -119,7 +119,7 @@ export default function HomePage() {
           <SectionHeading
             eyebrow="Contact"
             title="如果你觉得这些经历和你正在做的事情有关，可以联系我。"
-            description="项目合作、岗位沟通或经验交流都可以。"
+            description="岗位机会、项目合作或经验交流都可以。"
           />
           <ContactPanel />
         </div>

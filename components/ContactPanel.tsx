@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 import { contact } from "@/data/siteContent";
 
 export function ContactPanel() {
@@ -5,7 +7,7 @@ export function ContactPanel() {
     <div className="contact-layout">
       <article className="contact-card surface-card">
         <span className="section-eyebrow">Let&apos;s Talk</span>
-        <h3>如果你也在做 AI 产品、复杂策略系统，或者想交流转型路径，可以联系我。</h3>
+        <h3>如果你正在招 AI 产品、策略产品或相关岗位，或者想交流转型路径，可以联系我。</h3>
         <p>项目合作、岗位机会和经验交流都可以，信息清楚一点会更高效。</p>
         <div className="contact-list">
           <div className="contact-row">
@@ -16,6 +18,14 @@ export function ContactPanel() {
             <span>邮箱</span>
             <a href={`mailto:${contact.email}`}>{contact.email}</a>
           </div>
+        </div>
+        <div className="contact-actions">
+          <a href={contact.resumeLink} className="button button-primary" target="_blank" rel="noreferrer">
+            查看简历
+          </a>
+          <Link href={contact.github} className="button button-secondary" target="_blank" rel="noreferrer">
+            GitHub
+          </Link>
         </div>
       </article>
 

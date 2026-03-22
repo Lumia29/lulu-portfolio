@@ -4,15 +4,15 @@ import Link from "next/link";
 const credentials = [
   {
     label: "当前工作",
-    value: "字节跳动广告安全治理，负责复杂风险识别与自动化方案落地。",
+    value: "在字节做广告安全治理与模型运营，持续处理复杂风险识别和自动化落地。",
   },
   {
-    label: "过往经历",
-    value: "在阿里参与 AIGC 产品评测与功能优化，把反馈转成明确迭代方向。",
+    label: "过往积累",
+    value: "在阿里做 AIGC 产品评测，也在增长和用户运营场景里补过业务理解与需求判断。",
   },
   {
-    label: "长期方向",
-    value: "继续做 AI 产品，把模型能力、业务问题和用户体验接到一起。",
+    label: "转向目标",
+    value: "正在转向 AI 产品方向，希望把体验判断、业务问题和 AI 能力接成更完整的产品方案。",
   },
 ];
 
@@ -24,7 +24,7 @@ export function HeroSection() {
           <span className="hero-kicker">AI PRODUCT · RISK SYSTEMS · AIGC</span>
           <h1>嗨，我是刘露露👋🏻</h1>
           <p className="hero-intro">
-            我在字节做广告安全治理，也在阿里参与过 AIGC 产品优化。设计本硕背景让我对体验更敏感，模型运营经历让我更关注效果、效率和真正能不能落地。
+            我目前在字节做模型运营，正转向 AI 产品方向。设计本硕背景让我对体验更敏感，阿里和字节的经历让我更关注效果、效率，以及一件事到底能不能真正落地。
           </p>
           <div className="hero-credential-list">
             {credentials.map((item) => (

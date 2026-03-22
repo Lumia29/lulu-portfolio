@@ -24,8 +24,11 @@ export function SiteFooter() {
         <div className="footer-column">
           <p className="footer-label">Contact</p>
           <a href={`mailto:${contact.email}`}>{contact.email}</a>
+          <a href={contact.resumeLink} target="_blank" rel="noreferrer">
+            查看简历
+          </a>
           <a href={contact.github} target="_blank" rel="noreferrer">
-            GitHub 仓库
+            GitHub
           </a>
         </div>
       </div>

@@ -15,9 +15,12 @@ export function HeroSection() {
   return (
     <section className="hero-section">
       <div className="container hero-grid">
-        <div className="hero-copy">
+        <div className="hero-head">
           <span className="hero-kicker">AI PRODUCT · RISK SYSTEMS · AIGC</span>
           <h1>嗨，我是刘露露👋🏻</h1>
+        </div>
+
+        <div className="hero-summary">
           <p className="hero-intro">
             我目前在字节做模型运营，正转向 AI 产品方向。设计本硕背景让我对体验更敏感，阿里和字节的经历让我更关注效果、效率，以及一件事到底能不能真正落地。
           </p>
@@ -36,20 +39,6 @@ export function HeroSection() {
             <a href="#contact" className="button button-secondary">
               联系我
             </a>
-          </div>
-          <div className="hero-mini-stats">
-            <div>
-              <strong>99.13%</strong>
-              <span>风险识别准确率</span>
-            </div>
-            <div>
-              <strong>25w+</strong>
-              <span>AIGC 官网访问</span>
-            </div>
-            <div>
-              <strong>1-2h</strong>
-              <span>OpenClaw 每日节省</span>
-            </div>
           </div>
         </div>
 
@@ -73,6 +62,21 @@ export function HeroSection() {
               <span>我的方法</span>
               <p>先定义问题，再决定该交给模型、规则还是流程。</p>
             </div>
+          </div>
+        </div>
+
+        <div className="hero-mini-stats">
+          <div>
+            <strong>99.13%</strong>
+            <span>风险识别准确率</span>
+          </div>
+          <div>
+            <strong>25w+</strong>
+            <span>AIGC 官网访问</span>
+          </div>
+          <div>
+            <strong>1-2h</strong>
+            <span>OpenClaw 每日节省</span>
           </div>
         </div>
       </div>

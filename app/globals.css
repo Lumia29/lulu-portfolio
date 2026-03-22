@@ -253,14 +253,28 @@ main {
 
 .hero-grid {
   grid-template-columns: minmax(0, 1.08fr) minmax(320px, 0.92fr);
+  grid-template-areas:
+    "head artboard"
+    "summary artboard"
+    "stats artboard";
   align-items: start;
   gap: 44px;
   min-height: calc(100vh - 138px);
 }
 
-.hero-copy {
+.hero-head,
+.hero-summary,
+.hero-mini-stats {
   max-width: 620px;
+}
+
+.hero-head {
+  grid-area: head;
   padding-top: 18px;
+}
+
+.hero-summary {
+  grid-area: summary;
 }
 
 .surface-card,
@@ -269,7 +283,7 @@ main {
 }
 
 .hero-kicker,
-.hero-copy h1,
+.hero-head h1,
 .hero-intro,
 .hero-credential-list,
 .hero-actions,
@@ -283,7 +297,7 @@ main {
   animation-delay: 60ms;
 }
 
-.hero-copy h1 {
+.hero-head h1 {
   animation-delay: 120ms;
 }
 
@@ -333,7 +347,7 @@ main {
   color: var(--primary-strong);
 }
 
-.hero-copy h1 {
+.hero-head h1 {
   margin: 18px 0 18px;
   font-family: "Baskerville", "Times New Roman", "Songti SC", serif;
   font-size: clamp(2.6rem, 4.5vw, 4rem);
@@ -342,12 +356,12 @@ main {
   max-width: none;
 }
 
-.hero-copy h1 span {
+.hero-head h1 span {
   display: inline-block;
   transform: rotate(-10deg) translateY(-4px);
 }
 
-.hero-copy p,
+.hero-summary p,
 .section-heading p,
 .surface-card p,
 .project-body p,
@@ -357,12 +371,12 @@ main {
   line-height: 1.85;
 }
 
-.hero-copy p {
+.hero-summary p {
   max-width: 560px;
   font-size: clamp(1rem, 1.15vw, 1.08rem);
 }
 
-.hero-copy .hero-intro {
+.hero-summary .hero-intro {
   max-width: 52ch;
   line-height: 1.95;
 }
@@ -415,10 +429,11 @@ main {
 }
 
 .hero-mini-stats {
+  grid-area: stats;
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 12px;
-  margin-top: 22px;
+  align-self: end;
 }
 
 .hero-mini-stats div {
@@ -477,6 +492,7 @@ main {
 }
 
 .hero-artboard {
+  grid-area: artboard;
   position: relative;
   display: flex;
   justify-content: flex-end;
@@ -1309,7 +1325,13 @@ main {
   }
 
   .hero-grid {
+    grid-template-areas:
+      "head"
+      "artboard"
+      "summary"
+      "stats";
     min-height: auto;
+    gap: 24px;
   }
 
   .hero-stage {
@@ -1382,7 +1404,7 @@ main {
     padding-bottom: 88px;
   }
 
-  .hero-copy h1 {
+  .hero-head h1 {
     font-size: clamp(2.2rem, 10vw, 3.5rem);
     max-width: none;
   }
@@ -1415,8 +1437,13 @@ main {
     padding: 18px;
   }
 
-  .hero-copy {
+  .hero-head {
     padding-top: 6px;
+  }
+
+  .hero-summary {
+    display: grid;
+    gap: 18px;
   }
 
   .surface-card {

@@ -8,7 +8,7 @@ export default function ContactPage() {
         <SectionHeading
           eyebrow="Contact"
           title="联系我"
-          description="如果你想讨论合作机会、AI 产品想法，或者只是单纯想交流实践经验，都可以直接联系。"
+          description="对我的项目、经历或者 AI 产品转型路径感兴趣，都可以来聊。"
         />
         <ContactPanel />
       </div>

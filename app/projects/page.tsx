@@ -9,11 +9,11 @@ export default function ProjectsPage() {
         <SectionHeading
           eyebrow="Projects"
           title="项目案例"
-          description="每个项目都围绕一个明确目标展开：要么提升识别效果，要么压缩成本，要么把混乱的流程变成可运营的系统。"
+          description="项目页保持信息密度，但浏览体验不该像在看简历截图。"
         />
         <div className="projects-grid">
-          {projects.map((project) => (
-            <ProjectCard key={project.slug} project={project} />
+          {projects.map((project, index) => (
+            <ProjectCard key={project.slug} project={project} index={index} />
           ))}
         </div>
       </div>

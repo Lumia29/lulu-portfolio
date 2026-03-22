@@ -9,7 +9,7 @@ export default function ExperimentsPage() {
         <SectionHeading
           eyebrow="Experiments"
           title="AI 实验"
-          description="对我来说，实验不是为了追热点，而是用最小成本验证某个工具或工作流到底能不能长期成立。"
+          description="展示我如何把工具、流程和人机协作真正跑进日常工作里。"
         />
         <div className="stack-grid large-gap">
           {experiments.map((experiment) => (

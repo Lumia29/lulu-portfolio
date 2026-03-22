@@ -1,22 +1,45 @@
+import Image from "next/image";
 import Link from "next/link";
+
+const credentials = [
+  {
+    label: "当前工作",
+    value: "字节跳动广告安全治理，负责复杂风险识别与自动化方案落地。",
+  },
+  {
+    label: "过往经历",
+    value: "在阿里参与 AIGC 产品评测与功能优化，把反馈转成明确迭代方向。",
+  },
+  {
+    label: "长期方向",
+    value: "继续做 AI 产品，把模型能力、业务问题和用户体验接到一起。",
+  },
+];
 
 export function HeroSection() {
   return (
     <section className="hero-section">
       <div className="container hero-grid">
         <div className="hero-copy">
-          <span className="hero-kicker">MODEL OPS TO AI PRODUCT EXPLORER</span>
+          <span className="hero-kicker">AI PRODUCT · RISK SYSTEMS · AIGC</span>
           <h1>嗨，我是刘露露👋🏻</h1>
-          <p>
-            在字节做广告安全治理，在阿里搞 AIGC 工具，现在想用 AI 让工作更性感。设计本硕出身，却爱上了写
-            Prompt 和搭 Workflow，因为好看又好用，才是真的好用。
+          <p className="hero-intro">
+            我在字节做广告安全治理，也在阿里参与过 AIGC 产品优化。设计本硕背景让我对体验更敏感，模型运营经历让我更关注效果、效率和真正能不能落地。
           </p>
+          <div className="hero-credential-list">
+            {credentials.map((item) => (
+              <div key={item.label} className="hero-credential-item">
+                <span>{item.label}</span>
+                <strong>{item.value}</strong>
+              </div>
+            ))}
+          </div>
           <div className="hero-actions">
             <Link href="/projects" className="button button-primary">
-              看看我的项目
+              查看项目
             </Link>
             <Link href="/contact" className="button button-secondary">
-              聊聊合作
+              联系我
             </Link>
           </div>
           <div className="hero-mini-stats">
@@ -37,32 +60,23 @@ export function HeroSection() {
 
         <div className="hero-artboard">
           <div className="hero-stage">
-            <div className="hero-glow hero-glow-a" />
-            <div className="hero-glow hero-glow-b" />
-            <div className="hero-card hero-note top-left">
-              <span>Risk Governance</span>
-              <strong>ASR + OCR + Semantic</strong>
-            </div>
-            <div className="hero-card hero-note top-right">
-              <span>Product Sense</span>
-              <strong>好看，也要好用</strong>
-            </div>
-            <div className="hero-card hero-main-card">
-              <div className="hero-mesh">
-                <span className="dot a" />
-                <span className="dot b" />
-                <span className="dot c" />
+            <div className="hero-photo-frame">
+              <Image
+                src="/images/lulu-portrait.jpeg"
+                alt="刘露露在滕王阁前的照片"
+                fill
+                priority
+                sizes="(max-width: 1080px) 100vw, 34vw"
+                className="hero-photo"
+              />
+              <div className="hero-photo-note">
+                <span>Portrait</span>
+                <strong>还在成长和探索里，也在认真把 AI 做成更顺手的产品和系统</strong>
               </div>
-              <h3>把复杂 AI 工作做成清晰、靠谱、能落地的方案</h3>
-              <p>让模型能力真正接上业务和体验。</p>
             </div>
-            <div className="hero-card hero-note bottom-left">
-              <span>OpenClaw</span>
-              <strong>Workflow in Daily Life</strong>
-            </div>
-            <div className="hero-card hero-note bottom-right">
-              <span>Design Trained</span>
-              <strong>工业设计 × 产品设计</strong>
+            <div className="hero-stage-caption">
+              <span>我的方法</span>
+              <p>先定义问题，再决定该交给模型、规则还是流程。</p>
             </div>
           </div>
         </div>

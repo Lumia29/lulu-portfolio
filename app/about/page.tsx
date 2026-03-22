@@ -10,7 +10,7 @@ export default function AboutPage() {
         <SectionHeading
           eyebrow="About"
           title="关于我"
-          description="现在的 Title 是运营，但我一直在用产品思维做事。"
+          description="我做过模型运营、AIGC 产品评测和增长项目，但真正稳定下来的，是一套更偏产品的做事方法。"
         />
 
         <div className="about-page-grid">

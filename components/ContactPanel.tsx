@@ -5,8 +5,8 @@ export function ContactPanel() {
     <div className="contact-layout">
       <article className="contact-card surface-card">
         <span className="section-eyebrow">Let&apos;s Talk</span>
-        <h3>想聊 AI 产品的可能性，或者单纯想交个朋友？</h3>
-        <p>对我的经历、项目或转型路径感兴趣，都欢迎联系我。</p>
+        <h3>如果你也在做 AI 产品、复杂策略系统，或者想交流转型路径，可以联系我。</h3>
+        <p>项目合作、岗位机会和经验交流都可以，信息清楚一点会更高效。</p>
         <div className="contact-list">
           <div className="contact-row">
             <span>微信</span>
@@ -25,11 +25,11 @@ export function ContactPanel() {
           <div className="wechat-circle" />
           <div className="wechat-copy">
             <strong>{contact.wechat}</strong>
-            <span>现在先用微信号直达，后续可替换成二维码卡片。</span>
+            <span>目前先放微信号，后续可以再补二维码版本。</span>
           </div>
         </div>
         <div className="wechat-note">
-          <p>如果你更习惯异步沟通，也可以直接发邮件。我会把这个站点持续当成个人实验场更新。</p>
+          <p>如果你更习惯异步沟通，也可以直接发邮件。这个站点会继续作为我的长期作品集持续迭代。</p>
         </div>
       </article>
     </div>

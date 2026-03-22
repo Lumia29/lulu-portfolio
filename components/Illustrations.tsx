@@ -127,6 +127,21 @@ export function ProjectCover({ cover }: ProjectCoverProps) {
     );
   }
 
+  if (cover === "userops") {
+    return (
+      <svg viewBox="0 0 320 220" className="cover-graphic" aria-hidden="true">
+        <rect width="320" height="220" rx="28" fill="#F6F8FF" />
+        <rect x="28" y="40" width="120" height="140" rx="24" fill="#E0E7FF" />
+        <rect x="166" y="58" width="126" height="104" rx="24" fill="#FFF1E8" />
+        <circle cx="86" cy="88" r="24" fill="#5870D8" opacity="0.88" />
+        <path d="M62 128c8-14 20-21 36-21s28 7 36 21" stroke="#5870D8" strokeWidth="8" strokeLinecap="round" />
+        <path d="M188 88h82M188 112h62M188 136h72" stroke="#F28C6F" strokeWidth="7" strokeLinecap="round" />
+        <circle cx="228" cy="176" r="18" fill="#50A89D" opacity="0.9" />
+        <path d="M218 176h20M228 166v20" stroke="white" strokeWidth="5" strokeLinecap="round" />
+      </svg>
+    );
+  }
+
   return (
     <svg viewBox="0 0 320 220" className="cover-graphic" aria-hidden="true">
       <rect width="320" height="220" rx="28" fill="#F8FAFC" />

@@ -25,7 +25,7 @@ export function SiteFooter() {
           <p className="footer-label">Contact</p>
           <a href={`mailto:${contact.email}`}>{contact.email}</a>
           <a href={contact.github} target="_blank" rel="noreferrer">
-            GitHub Repository
+            GitHub 仓库
           </a>
         </div>
       </div>

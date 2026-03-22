@@ -12,8 +12,8 @@ export default function ProjectsPage() {
           description="项目页保持信息密度，但浏览体验不该像在看简历截图。"
         />
         <div className="projects-grid">
-          {projects.map((project) => (
-            <ProjectCard key={project.slug} project={project} />
+          {projects.map((project, index) => (
+            <ProjectCard key={project.slug} project={project} index={index} />
           ))}
         </div>
       </div>

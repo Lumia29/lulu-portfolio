@@ -25,7 +25,7 @@ export type SkillScore = {
 
 export type Project = {
   slug: string;
-  cover: "multimodal" | "workflow" | "agent" | "huiwa" | "growth";
+  cover: "multimodal" | "workflow" | "agent" | "huiwa" | "growth" | "userops";
   title: string;
   company: string;
   oneLiner: string;
@@ -49,9 +49,9 @@ export const siteMeta = {
   name: "刘露露",
   email: "henry135235@gmail.com",
   wechat: "uulllllluu",
-  title: "模型运营出身，正在探索 AI 产品，把复杂问题做成又好看又好用的体验。",
+  title: "字节跳动模型运营，持续探索 AI 产品与复杂系统的落地表达。",
   description:
-    "在字节做广告安全治理，在阿里做 AIGC 工具，正在把模型运营经验长成 AI 产品能力。",
+    "做过广告安全治理、Agent 自动化与 AIGC 产品优化，关注把复杂 AI 能力转成清晰、可用、可落地的产品体验。",
 };
 
 export const navigation: NavItem[] = [
@@ -59,49 +59,48 @@ export const navigation: NavItem[] = [
   { href: "/about", label: "About" },
   { href: "/projects", label: "Projects" },
   { href: "/experiments", label: "Experiments" },
-  { href: "/blog", label: "Blog", badge: "Coming Soon" },
   { href: "/contact", label: "Contact" },
 ];
 
 export const highlights: Highlight[] = [
   {
     id: "risk",
-    title: "AI 风险治理专家",
+    title: "风险治理与自动化",
     metric: "准确率 99.13%，TVVR 0.82%",
     bullets: [
-      "设计多模态识别方案，把复杂广告风险拆成可治理链路",
-      "TVVR 从 2.78% 降到 0.82%，目标达成率 265.49%",
-      "用 Agent 和 Workflow 把审核效率整体提升 75%",
+      "拆解小语种口播、联系方式导流等复杂风险链路",
+      "结合 ASR、OCR、语义理解和规则编排做精细化判断",
+      "在准确率、召回和审核成本之间找到真正可落地的平衡",
     ],
   },
   {
     id: "aigc",
-    title: "AIGC 产品操盘手",
-    metric: "官网访问 25w+，获客成本降 20%+",
+    title: "AIGC 产品评测与优化",
+    metric: "官网访问 25w+，获客成本降20%",
     bullets: [
-      "参与绘蛙产品优化，把零散反馈结构化成产品方向",
-      "搭建竞品评测体系，帮助团队判断优先级",
-      "把产品价值翻译成用户可感知的体验和增长结果",
+      "把 1000+ 用户反馈和 badcase 结构化成问题类型",
+      "搭建测试集、评分维度和竞品评测框架",
+      "支持局部修复、商品参考图等方向的优化判断",
     ],
   },
   {
     id: "experiment",
-    title: "自驱型 AI 实验者",
-    metric: "OpenClaw 每日节省 1-2 小时",
+    title: "个人 AI 工作流实验",
+    metric: "4 小时工作压缩到 30 分钟",
     bullets: [
-      "独立设计 OpenClaw 个人助手，持续改造日常工作流",
-      "用 AI 自动生成季度总结，4 小时工作压缩到 30 分钟",
-      "持续验证一个人 + 一群 Agent 的协作边界",
+      "持续用 Agent 和 Workflow 处理总结、标注和琐碎工单",
+      "验证一个人如何和工具协作，而不是被工具牵着走",
+      "把实验沉淀成更稳定的工作方法和产品感觉",
     ],
   },
 ];
 
 export const about = {
   intro:
-    "我不只做执行，更习惯把业务问题拆开、把 AI 能力接上真实体验。会看审核现场，也会写 Prompt、搭 Workflow，最后回到一句话：这个功能到底让人爽了吗？",
-  education: "设计本硕背景（工业设计 × 产品设计），7 年设计训练带来的不是画图能力，而是对人性和美的直觉。",
-  philosophy:
-    "好的 AI 产品，不是炫技，而是让人忘记技术的存在。",
+    "我现在的岗位更接近模型运营，但做事方式一直偏产品。面对复杂问题，我习惯先定义场景和判断标准，再决定该用模型、规则还是流程解决。",
+  education:
+    "设计本硕背景给了我审美和用户感知，字节与阿里的经历让我学会用数据、评测和落地结果说话。",
+  philosophy: "好的 AI 产品，不是把技术堆给用户，而是让复杂度在背后被消化。",
   experiences: [
     {
       company: "字节跳动",
@@ -134,7 +133,7 @@ export const about = {
     "Google Analytics",
     "OpenClaw / Coze",
   ],
-  softSkills: ["审美判断力", "跨团队协作", "把复杂问题讲清楚"],
+  softSkills: ["结构化分析", "跨团队协作", "审美判断"],
   radar: [
     { label: "AI / 模型", score: 4.8 },
     { label: "产品方法", score: 4.6 },
@@ -143,9 +142,9 @@ export const about = {
     { label: "跨团队协作", score: 4.5 },
   ] satisfies SkillScore[],
   beyondWork: [
-    "OpenClaw 重度用户，正在把助手调教得越来越懂我",
-    "偶尔拍拍照，审美在线是产品人的基本修养",
-    "持续学习 AI 前沿，每周至少深度体验 2 个新工具",
+    "持续记录和试用新工具，把个人站点当成长期实验场",
+    "保持对视觉和表达的敏感，这也是我做产品的重要判断依据",
+    "希望长期做 AI 产品，尤其是那些既有业务价值也有体验门槛的问题",
   ],
 };
 
@@ -265,6 +264,29 @@ export const projects: Project[] = [
     ],
     insight: "ToB 产品也能做增长，关键是找到对的内容和对的渠道。",
     tags: ["海外增长", "内容营销", "社媒矩阵", "冷启动"],
+  },
+  {
+    slug: "nio-user-ops",
+    cover: "userops",
+    title: "蔚来用户运营项目",
+    company: "蔚来汽车",
+    oneLiner: "围绕用户数据、需求分析和活动落地协作，补齐我对用户现场和业务协同的第一手理解。",
+    background:
+      "在进入 AI 与产品方向之前，我先在蔚来的用户运营场景里接触了真实业务现场。相比纯设计训练，这段经历让我第一次更直接地面对用户数据、业务需求和跨团队推进。",
+    role: "用户运营实习生 + 需求协同支持者",
+    actions: [
+      "参与用户数据调研，梳理不同类型用户反馈和行为特征",
+      "协助做需求分析，把零散反馈转成可以讨论的业务问题",
+      "参与活动策划与执行，理解从方案到落地的协同链路",
+      "在跨团队配合中学习如何平衡用户感受、业务目标和执行节奏",
+    ],
+    results: [
+      "建立了对用户运营现场和业务流程的基础理解",
+      "补齐了从设计视角走向业务视角的重要一段经历",
+      "为后续做增长、AIGC 产品和模型运营打下了用户与协同基础",
+    ],
+    insight: "这段经历不一定是最亮眼的项目，但它让我第一次真正进入业务现场，知道问题不是只靠想法解决，而要靠协作和落地。",
+    tags: ["用户运营", "需求分析", "活动协同", "业务理解"],
   },
 ];
 

@@ -7,7 +7,7 @@ import { siteMeta } from "@/data/siteContent";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: `${siteMeta.name} | AI Product Portfolio`,
+  title: `${siteMeta.name} | AI 产品作品集`,
   description: siteMeta.description,
 };
 

@@ -41,9 +41,6 @@ export function ProjectCard({ project, index = 0 }: ProjectCardProps) {
           </Link>
         </div>
       </div>
-      <Link href={`/projects/${project.slug}`} className="project-link">
-        查看详情
-      </Link>
     </article>
   );
 }

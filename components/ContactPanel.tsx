@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 import { contact } from "@/data/siteContent";
@@ -32,14 +33,26 @@ export function ContactPanel() {
       <article className="wechat-card surface-card">
         <span className="section-eyebrow">WeChat</span>
         <div className="wechat-badge">
-          <div className="wechat-circle" />
-          <div className="wechat-copy">
-            <strong>{contact.wechat}</strong>
-            <span>目前先放微信号，后续可以再补二维码版本。</span>
+          <strong>扫码添加微信</strong>
+          <p>适合聊岗位机会、项目合作，或者交流 AI 产品和转型路径。</p>
+        </div>
+        <div className="wechat-qr-shell">
+          <div className="wechat-qr-frame">
+            <Image
+              src="/images/wechat-qr.jpg"
+              alt="刘露露微信二维码，扫码添加微信"
+              width={884}
+              height={868}
+              className="wechat-qr-image"
+            />
           </div>
         </div>
+        <div className="wechat-meta">
+          <span>微信号</span>
+          <strong>{contact.wechat}</strong>
+        </div>
         <div className="wechat-note">
-          <p>如果你更习惯异步沟通，也可以直接发邮件。这个站点会继续作为我的长期作品集持续迭代。</p>
+          <p>添加时备注岗位、项目或来意，会更方便我快速回复。你如果更习惯异步沟通，也可以直接发邮件。</p>
         </div>
       </article>
     </div>

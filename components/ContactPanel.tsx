@@ -56,10 +56,6 @@ export function ContactPanel() {
             />
           </div>
         </div>
-        <div className="wechat-meta">
-          <span>微信号</span>
-          <strong>{contact.wechat}</strong>
-        </div>
       </article>
     </div>
   );

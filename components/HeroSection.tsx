@@ -1,17 +1,12 @@
 import Image from "next/image";
-import Link from "next/link";
 
 const credentials = [
   {
-    label: "当前工作",
+    label: "当前角色",
     value: "在字节做广告安全治理与模型运营，持续处理复杂风险识别和自动化落地。",
   },
   {
-    label: "过往积累",
-    value: "在阿里做 AIGC 产品评测，也在增长和用户运营场景里补过业务理解与需求判断。",
-  },
-  {
-    label: "转向目标",
+    label: "关注方向",
     value: "正在转向 AI 产品方向，希望把体验判断、业务问题和 AI 能力接成更完整的产品方案。",
   },
 ];
@@ -35,12 +30,12 @@ export function HeroSection() {
             ))}
           </div>
           <div className="hero-actions">
-            <Link href="/projects" className="button button-primary">
-              查看项目
-            </Link>
-            <Link href="/contact" className="button button-secondary">
+            <a href="#projects" className="button button-primary">
+              看看我的项目
+            </a>
+            <a href="#contact" className="button button-secondary">
               联系我
-            </Link>
+            </a>
           </div>
           <div className="hero-mini-stats">
             <div>

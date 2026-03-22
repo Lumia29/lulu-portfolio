@@ -36,11 +36,11 @@ export default function HomePage() {
       <section className="section-block">
         <div className="container about-preview-grid">
           <div>
-          <SectionHeading
-            eyebrow="About"
-            title="设计背景，让我既看体验，也看落地"
-            description="从设计训练到用户运营、增长、AIGC 评测再到模型运营，这条路径一直在把体验判断、业务理解和复杂系统落地慢慢接到一起。"
-          />
+            <SectionHeading
+              eyebrow="About"
+              title="设计背景，让我既看体验，也看落地"
+              description="从设计训练到用户运营、增长、AIGC 评测再到模型运营，这条路径一直在把体验判断、业务理解和复杂系统落地慢慢接到一起。"
+            />
             <article className="about-copy-card profile-story-card surface-card">
               <p className="profile-lead">{about.intro}</p>
               <p>{about.education}</p>
@@ -79,7 +79,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="section-block">
+      <section id="projects" className="section-block section-anchor">
         <div className="container">
           <SectionHeading
             eyebrow="Projects"
@@ -114,7 +114,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="section-block section-last">
+      <section id="contact" className="section-block section-last section-anchor">
         <div className="container">
           <SectionHeading
             eyebrow="Contact"

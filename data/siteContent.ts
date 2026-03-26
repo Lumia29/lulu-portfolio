@@ -29,10 +29,13 @@ export type Project = {
   title: string;
   company: string;
   oneLiner: string;
+  previewOneLiner?: string;
   background: string;
   role: string;
+  previewRole?: string;
   actions: string[];
   results: string[];
+  previewResult?: string;
   insight: string;
   tags: string[];
 };
@@ -68,19 +71,19 @@ export const highlights: Highlight[] = [
     title: "风险治理与自动化",
     metric: "准确率 99.13%，TVVR 0.82%",
     bullets: [
-      "拆解小语种口播、联系方式导流等复杂风险链路",
+      "拆解小语种、联系方式等复杂风险链路",
       "结合 ASR、OCR、语义理解和规则编排做精细化判断",
-      "在准确率、召回和审核成本之间找到真正可落地的平衡",
+      "在准确率、召回率和审核成本之间找到平衡",
     ],
   },
   {
     id: "aigc",
     title: "AIGC 产品评测与优化",
-    metric: "官网访问 25w+，获客成本降20%",
+    metric: "核心功能使用率提升40%",
     bullets: [
-      "把 1000+ 用户反馈和 badcase 结构化成问题类型",
+      "基于 1000+ 用户反馈和 badcase，梳理核心问题类型",
       "搭建测试集、评分维度和竞品评测框架",
-      "支持局部修复、商品参考图等方向的优化判断",
+      "支持局部修复、商品参考图等方向的优化",
     ],
   },
   {
@@ -89,7 +92,7 @@ export const highlights: Highlight[] = [
     metric: "4 小时工作压缩到 30 分钟",
     bullets: [
       "持续用 Agent 和 Workflow 处理总结、标注和琐碎工单",
-      "验证一个人如何和工具协作，而不是被工具牵着走",
+      "验证 AI 工具在真实工作流中的实际可用性",
       "把实验沉淀成更稳定的工作方法和产品感觉",
     ],
   },
@@ -97,10 +100,10 @@ export const highlights: Highlight[] = [
 
 export const about = {
   intro:
-    "我目前在字节做模型运营，也正在把重心转向 AI 产品方向。面对复杂问题，我习惯先定义场景和判断标准，再决定该用模型、规则还是流程解决。",
+    "我目前在字节负责模型运营与风险治理，也在持续把重心放到AI产品方向。面对复杂问题，我习惯先定义场景和判断标准，再决定该用模型、规则还是流程来解决。",
   education:
-    "设计本硕背景给了我审美和用户感知，蔚来和长亭补上了业务现场与增长视角，阿里和字节让我学会用数据、评测和落地结果说话。",
-  philosophy: "好的 AI 产品，不是把技术堆给用户，而是让复杂度在背后被消化。",
+    "设计本硕背景给了我审美和用户感知，蔚来和长亭让我建立起业务现场与增长视角，阿里和字节则让我学会用数据、评测和落地结果说话。",
+  philosophy: "我理解的好 AI 产品，不是把技术能力直接堆给用户，而是把复杂度消化在系统背后。",
   experiences: [
     {
       company: "字节跳动",
@@ -133,7 +136,7 @@ export const about = {
     "Google Analytics",
     "OpenClaw / Coze",
   ],
-  softSkills: ["结构化分析", "跨团队协作", "审美判断"],
+  softSkills: ["结构化分析", "评测与方案设计", "跨团队协作"],
   radar: [
     { label: "AI / 模型", score: 4.8 },
     { label: "产品方法", score: 4.6 },
@@ -155,6 +158,8 @@ export const projects: Project[] = [
     title: "多模态风险识别方案",
     company: "字节跳动",
     oneLiner: "用 ASR + OCR + 语义融合，解决短视频小语种口播漏判难题。",
+    previewRole: "角色：方案设计与落地推动",
+    previewResult: "风险率TVVR降至0.82%",
     background:
       "抖音广告里，有些黑产会用小语种口播加无字幕的方式逃避审核。传统关键词方案覆盖不住，人工又听不过来。",
     role: "方案设计者 + 落地推动者",
@@ -202,8 +207,10 @@ export const projects: Project[] = [
     title: "IM 私信导流治理 Agent",
     company: "字节跳动",
     oneLiner: "设计串联式大模型判断逻辑，让 LLM 无效调用率降低 60%。",
+    previewOneLiner: "设计串联式大模型判断逻辑，减少无效调用和成本浪费。",
     background:
       "商家会在私信里引导用户加微信或 QQ，传统并行判断方案误杀多、调用贵，既伤体验又伤成本。",
+    previewRole: "角色：AI 流程设计与优化推动",
     role: "Agent 产品设计师 + 流程优化者",
     actions: [
       "重构为串联式逻辑，先判断导流意图，再判断发起方",
@@ -225,6 +232,7 @@ export const projects: Project[] = [
     title: "绘蛙 AIGC 工具优化",
     company: "阿里淘天",
     oneLiner: "基于 1000+ 用户反馈梳理问题，推动局部修复、商品参考图等方向迭代。",
+    previewRole: "角色：需求分析与评测体系搭建",
     background:
       "绘蛙服务商家内容生产，但用户持续反馈人物崩坏、商品贴合度差、指令听不懂。问题很多，却没有一套可转成产品决策的方法。",
     role: "需求分析师 + 评测体系搭建者",
@@ -248,8 +256,11 @@ export const projects: Project[] = [
     title: "海外增长冷启动",
     company: "长亭科技",
     oneLiner: "从 0 搭建海外社媒矩阵，装机量新增 100 倍，首月收入突破 30w。",
+    previewOneLiner: "从0到1搭建海外社媒矩阵和增长闭环，推动冷启动转化为装机和收入增量。",
     background:
       "SafeLine 出海起步时几乎没有预算，需要用内容和渠道策略撬动增长，而不是靠投放硬砸。",
+    previewRole: "角色：增长策略与产品运营",
+    previewResult: "装机量新增 100 倍，首月收入突破 30w",
     role: "海外增长负责人 + 内容创作者",
     actions: [
       "在 Medium 和 Dev.to 发布技术内容，累计阅读量 5w+",

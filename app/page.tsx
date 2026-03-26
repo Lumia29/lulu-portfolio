@@ -22,7 +22,7 @@ export default function HomePage() {
         <div className="container">
           <SectionHeading
             eyebrow="Highlights"
-            title="核心能力"
+            title="核心亮点"
             description="聚焦三类最能代表我的工作：风险治理、AIGC 产品优化与 AI 工作流实验。"
           />
           <div className="highlights-grid">
@@ -39,7 +39,7 @@ export default function HomePage() {
             <SectionHeading
               eyebrow="About"
               title="设计背景，让我既看体验，也看落地"
-              description="从设计训练到用户运营、增长、AIGC 评测再到模型运营，这条路径一直在把体验判断、业务理解和复杂系统落地慢慢接到一起。"
+              description="从设计训练到用户运营、增长、AIGC 评测，再到模型运营，这段路径让我逐步把体验判断、业务理解和复杂系统落地连接成一套更完整的方法。"
             />
             <article className="about-copy-card profile-story-card surface-card">
               <p className="profile-lead">{about.intro}</p>
@@ -84,7 +84,7 @@ export default function HomePage() {
           <SectionHeading
             eyebrow="Projects"
             title="代表项目"
-            description="项目覆盖风险治理、AIGC 产品和增长场景，但共通点都不是技术堆叠，而是把问题定义清楚、把结果做出来。"
+            description="项目覆盖风险治理、AIGC 产品和增长场景，但它们的共通点不是技术堆叠，而是先把问题定义清楚，再把结果真正做出来。"
           />
           <div className="projects-grid">
             {featuredProjects.map((project, index) => (

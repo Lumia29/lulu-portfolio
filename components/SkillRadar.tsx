@@ -21,7 +21,7 @@ export function SkillRadar({ items }: SkillRadarProps) {
     <div className="radar-card surface-card">
       <div className="radar-header">
         <span className="section-eyebrow">Skill Map</span>
-        <h3>Capabilities</h3>
+        <h3>能力图谱</h3>
       </div>
       <svg viewBox="0 0 280 280" className="radar-chart" aria-label="Skill radar chart">
         {[1, 2, 3, 4, 5].map((step) => {

@@ -9,6 +9,10 @@ type ProjectCardProps = {
 };
 
 export function ProjectCard({ project, index = 0 }: ProjectCardProps) {
+  const previewRole = project.previewRole ?? project.role;
+  const previewOneLiner = project.previewOneLiner ?? project.oneLiner;
+  const previewResult = project.previewResult ?? project.results[0];
+
   return (
     <article className="project-card surface-card">
       <div className="project-cover">
@@ -20,13 +24,13 @@ export function ProjectCard({ project, index = 0 }: ProjectCardProps) {
       </div>
       <div className="project-body">
         <div className="project-meta">
-          <span className="project-role-pill">{project.role}</span>
+          <span className="project-role-pill">{previewRole}</span>
         </div>
         <h3>{project.title}</h3>
-        <p>{project.oneLiner}</p>
+        <p>{previewOneLiner}</p>
         <div className="project-outcome">
           <span>代表结果</span>
-          <strong>{project.results[0]}</strong>
+          <strong>{previewResult}</strong>
         </div>
         <div className="tag-row project-tag-row">
           {project.tags.map((tag) => (

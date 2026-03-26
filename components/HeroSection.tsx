@@ -3,11 +3,11 @@ import Image from "next/image";
 const credentials = [
   {
     label: "当前角色",
-    value: "在字节做广告安全治理与模型运营，持续处理复杂风险识别和自动化落地。",
+    value: "负责抖音广告安全的多模态风险治理，推动复杂风险识别、Agent 自动化处置和策略落地。",
   },
   {
     label: "关注方向",
-    value: "正在转向 AI 产品方向，希望把体验判断、业务问题和 AI 能力接成更完整的产品方案。",
+    value: "聚焦 AIGC 产品、AI 应用和策略型产品，连接用户问题、业务流程与 AI 能力。",
   },
 ];
 
@@ -17,12 +17,12 @@ export function HeroSection() {
       <div className="container hero-grid">
         <div className="hero-head">
           <span className="hero-kicker">AI PRODUCT · RISK SYSTEMS · AIGC</span>
-          <h1>嗨，我是刘露露👋🏻</h1>
+          <h1>你好，我是刘露露 👋</h1>
         </div>
 
         <div className="hero-summary">
           <p className="hero-intro">
-            我目前在字节做模型运营，正转向 AI 产品方向。设计本硕背景让我对体验更敏感，阿里和字节的经历让我更关注效果、效率，以及一件事到底能不能真正落地。
+            我目前在字节做模型运营，过往在阿里做过 AIGC 产品评测优化和增长相关工作。希望把这些经验进一步用在 AI 产品方向，解决真实的用户与业务问题。
           </p>
           <div className="hero-credential-list">
             {credentials.map((item) => (
@@ -55,7 +55,7 @@ export function HeroSection() {
               />
               <div className="hero-photo-note">
                 <span>Portrait</span>
-                <strong>还在成长和探索里，也在认真把 AI 做成更顺手的产品和系统</strong>
+                <strong>持续把复杂系统经验沉淀成更顺手的 AI 产品方法。</strong>
               </div>
             </div>
             <div className="hero-stage-caption">

@@ -10,7 +10,7 @@ export default function AboutPage() {
         <SectionHeading
           eyebrow="About"
           title="关于我"
-          description="从设计训练到业务现场，再到 AIGC 评测和复杂系统治理，这些经历最后都汇到同一件事上：转向 AI 产品方向。"
+          description="从设计训练到用户运营、增长、AIGC 评测，再到模型运营，这段路径让我逐步把体验判断、业务理解和复杂系统落地连接成一套更完整的方法。"
         />
 
         <div className="about-page-grid">

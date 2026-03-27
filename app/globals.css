@@ -1026,12 +1026,12 @@ main {
 }
 
 .radar-header {
-  margin-bottom: 14px;
+  margin-bottom: 12px;
 }
 
 .radar-chart {
   width: 100%;
-  max-width: 280px;
+  max-width: 360px;
   margin: 0 auto;
 }
 
@@ -1058,7 +1058,9 @@ main {
 
 .radar-label {
   fill: var(--text);
-  font-size: 11px;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.01em;
   font-family: "Source Han Sans SC", "Noto Sans SC", sans-serif;
 }
 
@@ -1236,6 +1238,15 @@ main {
   transition: transform 240ms cubic-bezier(0.2, 0.8, 0.2, 1), filter 240ms ease;
 }
 
+.experiment-head > div {
+  display: grid;
+  gap: 10px;
+}
+
+.experiment-head .section-eyebrow {
+  margin-bottom: 0;
+}
+
 .status-chip {
   padding: 10px 14px;
   background: rgba(81, 108, 98, 0.1);
@@ -1279,6 +1290,11 @@ main {
   grid-template-columns: minmax(0, 1fr);
   gap: 0;
   align-items: start;
+}
+
+.contact-copy-stack {
+  display: grid;
+  gap: 10px;
 }
 
 .contact-kicker {
@@ -1354,7 +1370,7 @@ main {
 .wechat-head {
   display: grid;
   grid-template-columns: minmax(0, 1fr);
-  gap: 16px;
+  gap: 0;
   align-items: start;
 }
 
@@ -1392,12 +1408,12 @@ main {
 
 .wechat-qr-frame {
   overflow: hidden;
-  width: min(100%, 332px);
+  width: min(100%, 292px);
   border-radius: 30px;
   border: 1px solid rgba(88, 112, 216, 0.14);
   background:
     linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(247, 248, 255, 0.94));
-  padding: 12px;
+  padding: 10px;
   box-shadow:
     0 28px 64px rgba(88, 112, 216, 0.14),
     inset 0 1px 0 rgba(255, 255, 255, 0.88);

@@ -158,7 +158,7 @@ export const projects: Project[] = [
     title: "多模态风险识别方案",
     company: "字节跳动",
     oneLiner: "用 ASR + OCR + 语义融合，解决短视频小语种口播漏判难题。",
-    previewRole: "角色：方案设计与落地推动",
+    previewRole: "角色：方案设计与落地",
     previewResult: "风险率TVVR降至0.82%",
     background:
       "抖音广告里，有些黑产会用小语种口播加无字幕的方式逃避审核。传统关键词方案覆盖不住，人工又听不过来。",
@@ -210,7 +210,7 @@ export const projects: Project[] = [
     previewOneLiner: "设计串联式大模型判断逻辑，减少无效调用和成本浪费。",
     background:
       "商家会在私信里引导用户加微信或 QQ，传统并行判断方案误杀多、调用贵，既伤体验又伤成本。",
-    previewRole: "角色：AI 流程设计与优化推动",
+    previewRole: "角色：AI 流程设计与优化",
     role: "Agent 产品设计师 + 流程优化者",
     actions: [
       "重构为串联式逻辑，先判断导流意图，再判断发起方",
@@ -232,7 +232,7 @@ export const projects: Project[] = [
     title: "绘蛙 AIGC 工具优化",
     company: "阿里淘天",
     oneLiner: "基于 1000+ 用户反馈梳理问题，推动局部修复、商品参考图等方向迭代。",
-    previewRole: "角色：需求分析与评测体系搭建",
+    previewRole: "角色：需求分析与产品评测",
     background:
       "绘蛙服务商家内容生产，但用户持续反馈人物崩坏、商品贴合度差、指令听不懂。问题很多，却没有一套可转成产品决策的方法。",
     role: "需求分析师 + 评测体系搭建者",
@@ -305,11 +305,11 @@ export const experiments: Experiment[] = [
   {
     title: "OpenClaw 个人助手 Agent",
     status: "稳定使用中",
-    oneLiner: "独立设计个人 AI 助手，自动化处理日常任务与垂直业务场景。",
+    oneLiner: "独立设计个人 AI 助手，自动化处理日常任务与业务场景中重复性工作。",
     modules: [
-      "消息总结、待办提取、会议预订、调休提醒等日常任务自动化",
-      "数据标注 SOP 自动化，形成自动标注、跑数测试、结果校验闭环",
-      "广告审核误伤工单豁免提取，集中处理琐碎工单",
+      "自动化处理消息总结、待办提取、会议预订、调休提醒等日常任务",
+      "将数据标注 SOP 自动化，形成自动标注、跑数测试、结果校验的闭环",
+      "自动提取广告审核误伤工单信息，集中处理高频琐碎工单",
     ],
     future: ["封装成可复用技能分享给团队", "继续探索周报、待办跟进等垂直场景"],
   },

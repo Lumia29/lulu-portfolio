@@ -6,17 +6,16 @@ export function ContactPanel() {
   return (
     <div className="contact-layout">
       <article className="contact-card surface-card">
-        <span className="section-eyebrow">Contact</span>
-        <div className="contact-hero">
-          <div>
-            <span className="contact-kicker">Open To</span>
-            <h3>岗位机会、项目合作，或者认真聊聊 AI 产品。</h3>
+        <span className="section-eyebrow">Open To</span>
+        <div className="contact-copy-stack">
+          <div className="contact-hero">
+            <h3>岗位机会、项目合作，或围绕 AI 产品方向的交流。</h3>
           </div>
+          <p className="contact-intro">
+            如果你在招 AI 产品或交流 AIGC 产品与 AI 应用相关问题，欢迎联系我。带上岗位信息、项目阶段或你想讨论的问题，
+            会更高效~
+          </p>
         </div>
-        <p className="contact-intro">
-          如果你在招 AI 产品、策略产品，或者想聊复杂系统怎么做成更顺手的产品，可以直接联系我。信息带上岗位、
-          项目阶段或你想聊的问题，会更高效。
-        </p>
         <div className="contact-list">
           <div className="contact-row">
             <span className="contact-row-label">手机</span>
@@ -39,10 +38,12 @@ export function ContactPanel() {
 
       <article className="wechat-card surface-card">
         <span className="section-eyebrow">WeChat</span>
-        <div className="wechat-head">
-          <div className="wechat-badge">
-            <strong>扫码添加微信</strong>
-            <p>优先用于快速确认合作、岗位信息和进一步沟通。</p>
+        <div className="contact-copy-stack">
+          <div className="wechat-head">
+            <div className="wechat-badge">
+              <strong>扫码添加微信</strong>
+              <p>适合快速确认岗位信息、合作意向和后续沟通。</p>
+            </div>
           </div>
         </div>
         <div className="wechat-qr-shell">

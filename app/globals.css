@@ -930,6 +930,19 @@ main {
   gap: 24px;
 }
 
+.about-preview-grid > :nth-child(1) {
+  grid-column: 1 / -1;
+}
+
+.about-preview-grid > .about-copy-card {
+  grid-column: 1;
+}
+
+.about-preview-grid > .about-side-stack {
+  grid-column: 2;
+  grid-row: 2 / 4;
+}
+
 .about-page-grid {
   grid-template-columns: minmax(0, 1.08fr) minmax(320px, 0.92fr);
   align-items: start;
@@ -1257,6 +1270,10 @@ main {
 .experiments-home-grid {
   grid-template-columns: minmax(300px, 0.72fr) minmax(0, 1.28fr);
   align-items: start;
+}
+
+.experiments-home-grid .stack-grid .experiment-card:nth-child(n+2) {
+  display: none;
 }
 
 .experiment-head {
@@ -2018,6 +2035,7 @@ main {
     flex: 0 0 75vw;
     max-width: 75vw;
     scroll-snap-align: start;
+    display: block;
   }
 
   .experiments-home-grid .experiment-columns {
@@ -2108,6 +2126,19 @@ main {
     display: grid;
     grid-template-columns: 1fr;
     gap: 14px;
+  }
+
+  .about-preview-grid > :nth-child(1) {
+    grid-column: auto;
+  }
+
+  .about-preview-grid > .about-copy-card {
+    grid-column: auto;
+  }
+
+  .about-preview-grid > .about-side-stack {
+    grid-column: auto;
+    grid-row: auto;
   }
 
   /* About: mobile layout — Trajectory → profile-card → (Skill Map hidden) */

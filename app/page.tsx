@@ -45,55 +45,39 @@ export default function HomePage() {
               title="设计背景，让我既看体验，也看落地"
               description="从设计训练到用户运营、增长、AIGC 评测，再到模型运营，这段路径让我逐步把体验判断、业务理解和复杂系统落地连接成一套更完整的方法。"
             />
-          </div>
-          <article className="surface-card trajectory-card about-trajectory-mobile">
-            <span className="section-eyebrow">Trajectory</span>
-            <div className="trajectory-list">
-              {about.experiences.map((item) => (
-                <div key={item.company} className="trajectory-item">
-                  <span className="trajectory-period">{item.period}</span>
-                  <strong className="trajectory-title">
-                    {item.company} · {item.role}
-                  </strong>
-                  <p>{item.detail}</p>
-                </div>
-              ))}
-            </div>
-          </article>
-          <article className="about-copy-card profile-story-card surface-card">
-            <p className="profile-lead">{about.intro}</p>
-            <p className="about-detail-text">{about.education}</p>
-            <p className="about-detail-text">{about.philosophy}</p>
-            <div className="profile-card-footer">
-              <div className="tag-row">
-                {about.softSkills.map((item) => (
-                  <span key={item} className="tag">
-                    {item}
-                  </span>
-                ))}
-              </div>
-              <Link href="/about" className="project-link">
-                查看完整 About
-              </Link>
-            </div>
-          </article>
-          <div className="about-side-stack">
-            <div className="about-trajectory-desktop">
-              <article className="surface-card trajectory-card">
-                <span className="section-eyebrow">Trajectory</span>
-                <div className="trajectory-list">
-                  {about.experiences.map((item) => (
-                    <div key={item.company + "-desktop"} className="trajectory-item">
-                      <span className="trajectory-period">{item.period}</span>
-                      <strong className="trajectory-title">
-                        {item.company} · {item.role}
-                      </strong>
-                      <p>{item.detail}</p>
-                    </div>
+            <article className="about-copy-card profile-story-card surface-card">
+              <p className="profile-lead">{about.intro}</p>
+              <p className="about-detail-text">{about.education}</p>
+              <p className="about-detail-text">{about.philosophy}</p>
+              <div className="profile-card-footer">
+                <div className="tag-row">
+                  {about.softSkills.map((item) => (
+                    <span key={item} className="tag">
+                      {item}
+                    </span>
                   ))}
                 </div>
-              </article>
-            </div>
+                <Link href="/about" className="project-link">
+                  查看完整 About
+                </Link>
+              </div>
+            </article>
+          </div>
+          <div className="about-side-stack">
+            <article className="surface-card trajectory-card">
+              <span className="section-eyebrow">Trajectory</span>
+              <div className="trajectory-list">
+                {about.experiences.map((item) => (
+                  <div key={item.company} className="trajectory-item">
+                    <span className="trajectory-period">{item.period}</span>
+                    <strong className="trajectory-title">
+                      {item.company} · {item.role}
+                    </strong>
+                    <p>{item.detail}</p>
+                  </div>
+                ))}
+              </div>
+            </article>
             <div className="radar-card surface-card">
               <div className="radar-header">
                 <span className="section-eyebrow">Skill Map</span>

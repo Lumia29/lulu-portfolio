@@ -1999,10 +1999,6 @@ main {
     margin-top: -22px;
   }
 
-  .experiments-home-grid .experiments-actions {
-    order: 2;
-  }
-
   .experiments-home-grid .stack-grid {
     display: flex;
     overflow-x: auto;

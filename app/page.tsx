@@ -131,16 +131,14 @@ export default function HomePage() {
               title="持续进行的小实验"
               description="我会先在自己的工作流里验证新工具和新方法，确认它真的有效，再考虑它是否值得走向更大的场景。"
             />
+            <Link href="/experiments" className="button button-secondary inline-button">
+              看完整实验记录
+            </Link>
           </div>
           <div className="stack-grid">
             {experiments.map((experiment) => (
               <ExperimentCard key={experiment.title} experiment={experiment} />
             ))}
-          </div>
-          <div className="experiments-actions">
-            <Link href="/experiments" className="button button-secondary inline-button">
-              看完整实验记录
-            </Link>
           </div>
           <div className="scroll-hint">
             <span className="scroll-hint-icon" />

@@ -14,7 +14,7 @@ export function ProjectCard({ project, index = 0 }: ProjectCardProps) {
   const previewResult = project.previewResult ?? project.results[0];
 
   return (
-    <article className="project-card surface-card">
+    <Link href={`/projects/${project.slug}`} className="project-card surface-card">
       <div className="project-cover">
         <div className="project-cover-top">
           <span className="project-index">{String(index + 1).padStart(2, "0")}</span>
@@ -24,6 +24,7 @@ export function ProjectCard({ project, index = 0 }: ProjectCardProps) {
       </div>
       <div className="project-body">
         <div className="project-meta">
+          <span className="project-index project-index-inline">{String(index + 1).padStart(2, "0")}</span>
           <span className="project-role-pill">{previewRole}</span>
         </div>
         <h3>{project.title}</h3>
@@ -40,11 +41,11 @@ export function ProjectCard({ project, index = 0 }: ProjectCardProps) {
           ))}
         </div>
         <div className="project-footer">
-          <Link href={`/projects/${project.slug}`} className="project-link">
+          <span className="project-link">
             查看详情
-          </Link>
+          </span>
         </div>
       </div>
-    </article>
+    </Link>
   );
 }

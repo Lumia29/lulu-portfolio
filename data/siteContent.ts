@@ -274,7 +274,7 @@ export const projects: Project[] = [
       "首月收入突破 30w",
     ],
     insight: "ToB 产品也能做增长，关键是找到对的内容和对的渠道。",
-    tags: ["海外增长", "内容营销", "社媒矩阵", "冷启动"],
+    tags: ["海外增长", "内容营销", "冷启动"],
   },
   {
     slug: "nio-user-ops",
@@ -304,7 +304,7 @@ export const projects: Project[] = [
 export const experiments: Experiment[] = [
   {
     title: "OpenClaw 个人助手 Agent",
-    status: "稳定使用中",
+    status: "使用中",
     oneLiner: "独立设计个人 AI 助手，自动化处理日常任务与业务场景中重复性工作。",
     modules: [
       "自动化处理消息总结、待办提取、会议预订、调休提醒等日常任务",

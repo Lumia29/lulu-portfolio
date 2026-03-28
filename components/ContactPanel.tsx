@@ -9,15 +9,17 @@ export function ContactPanel() {
         <span className="section-eyebrow">Open To</span>
         <div className="contact-copy-stack">
           <div className="contact-hero">
-            <h3>岗位机会、项目合作，或围绕 AI 产品方向的交流。</h3>
+            <h3 className="contact-title-desktop">岗位机会、项目合作，或围绕 AI 产品方向的交流。</h3>
+            <h3 className="contact-title-mobile">欢迎联系我</h3>
           </div>
-          <p className="contact-intro">
+          <p className="contact-intro contact-intro-desktop">
             如果你在招 AI 产品或交流 AIGC 产品与 AI 应用相关问题，欢迎联系我。带上岗位信息、项目阶段或你想讨论的问题，
             会更高效~
           </p>
+          <p className="contact-intro contact-intro-mobile">岗位机会、项目合作或交流</p>
         </div>
         <div className="contact-list">
-          <div className="contact-row">
+          <div className="contact-row contact-phone-row">
             <span className="contact-row-label">手机</span>
             <strong>{contact.phone}</strong>
           </div>
@@ -30,7 +32,7 @@ export function ContactPanel() {
           <a href={contact.resumeLink} className="button button-primary" target="_blank" rel="noreferrer">
             查看简历
           </a>
-          <a href={`mailto:${contact.email}`} className="button button-secondary">
+          <a href={`mailto:${contact.email}`} className="button button-secondary contact-email-btn">
             发邮件
           </a>
         </div>

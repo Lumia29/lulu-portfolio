@@ -6,7 +6,7 @@ import { HeroSection } from "@/components/HeroSection";
 import { HighlightCard } from "@/components/HighlightCard";
 import { ProjectCard } from "@/components/ProjectCard";
 import { SectionHeading } from "@/components/SectionHeading";
-import { SkillRadar } from "@/components/SkillRadar";
+import { SkillRadarChart } from "@/components/SkillRadar";
 import { about, experiments, highlights, projects } from "@/data/siteContent";
 
 export default function HomePage() {
@@ -30,6 +30,10 @@ export default function HomePage() {
               <HighlightCard key={item.id} item={item} />
             ))}
           </div>
+          <div className="scroll-hint">
+            <span className="scroll-hint-icon" />
+            <span>滑动查看更多</span>
+          </div>
         </div>
       </section>
 
@@ -41,40 +45,61 @@ export default function HomePage() {
               title="设计背景，让我既看体验，也看落地"
               description="从设计训练到用户运营、增长、AIGC 评测，再到模型运营，这段路径让我逐步把体验判断、业务理解和复杂系统落地连接成一套更完整的方法。"
             />
-            <article className="about-copy-card profile-story-card surface-card">
-              <p className="profile-lead">{about.intro}</p>
-              <p>{about.education}</p>
-              <p>{about.philosophy}</p>
-              <div className="profile-card-footer">
-                <div className="tag-row">
-                  {about.softSkills.map((item) => (
-                    <span key={item} className="tag">
-                      {item}
-                    </span>
-                  ))}
-                </div>
-                <Link href="/about" className="project-link">
-                  查看完整 About
-                </Link>
-              </div>
-            </article>
           </div>
-          <div className="about-side-stack">
-            <article className="surface-card trajectory-card">
-              <span className="section-eyebrow">Trajectory</span>
-              <div className="trajectory-list">
-                {about.experiences.map((item) => (
-                  <div key={item.company} className="trajectory-item">
-                    <span className="trajectory-period">{item.period}</span>
-                    <strong className="trajectory-title">
-                      {item.company} · {item.role}
-                    </strong>
-                    <p>{item.detail}</p>
-                  </div>
+          <article className="surface-card trajectory-card about-trajectory-mobile">
+            <span className="section-eyebrow">Trajectory</span>
+            <div className="trajectory-list">
+              {about.experiences.map((item) => (
+                <div key={item.company} className="trajectory-item">
+                  <span className="trajectory-period">{item.period}</span>
+                  <strong className="trajectory-title">
+                    {item.company} · {item.role}
+                  </strong>
+                  <p>{item.detail}</p>
+                </div>
+              ))}
+            </div>
+          </article>
+          <article className="about-copy-card profile-story-card surface-card">
+            <p className="profile-lead">{about.intro}</p>
+            <p className="about-detail-text">{about.education}</p>
+            <p className="about-detail-text">{about.philosophy}</p>
+            <div className="profile-card-footer">
+              <div className="tag-row">
+                {about.softSkills.map((item) => (
+                  <span key={item} className="tag">
+                    {item}
+                  </span>
                 ))}
               </div>
-            </article>
-            <SkillRadar items={about.radar} />
+              <Link href="/about" className="project-link">
+                查看完整 About
+              </Link>
+            </div>
+          </article>
+          <div className="about-side-stack">
+            <div className="about-trajectory-desktop">
+              <article className="surface-card trajectory-card">
+                <span className="section-eyebrow">Trajectory</span>
+                <div className="trajectory-list">
+                  {about.experiences.map((item) => (
+                    <div key={item.company + "-desktop"} className="trajectory-item">
+                      <span className="trajectory-period">{item.period}</span>
+                      <strong className="trajectory-title">
+                        {item.company} · {item.role}
+                      </strong>
+                      <p>{item.detail}</p>
+                    </div>
+                  ))}
+                </div>
+              </article>
+            </div>
+            <div className="radar-card surface-card">
+              <div className="radar-header">
+                <span className="section-eyebrow">Skill Map</span>
+              </div>
+              <SkillRadarChart items={about.radar} />
+            </div>
           </div>
         </div>
       </section>
@@ -91,6 +116,10 @@ export default function HomePage() {
               <ProjectCard key={project.slug} project={project} index={index} />
             ))}
           </div>
+          <div className="scroll-hint">
+            <span className="scroll-hint-icon" />
+            <span>滑动查看更多</span>
+          </div>
         </div>
       </section>
 
@@ -102,14 +131,20 @@ export default function HomePage() {
               title="持续进行的小实验"
               description="我会先在自己的工作流里验证新工具和新方法，确认它真的有效，再考虑它是否值得走向更大的场景。"
             />
+          </div>
+          <div className="stack-grid">
+            {experiments.map((experiment) => (
+              <ExperimentCard key={experiment.title} experiment={experiment} />
+            ))}
+          </div>
+          <div className="experiments-actions">
             <Link href="/experiments" className="button button-secondary inline-button">
               看完整实验记录
             </Link>
           </div>
-          <div className="stack-grid">
-            {experiments.slice(0, 1).map((experiment) => (
-              <ExperimentCard key={experiment.title} experiment={experiment} />
-            ))}
+          <div className="scroll-hint">
+            <span className="scroll-hint-icon" />
+            <span>滑动查看更多</span>
           </div>
         </div>
       </section>

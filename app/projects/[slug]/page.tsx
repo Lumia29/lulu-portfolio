@@ -1,22 +1,21 @@
-import Link from "next/link";
 import { notFound } from "next/navigation";
 
+import { BackButton } from "@/components/BackButton";
 import { ProjectCover } from "@/components/Illustrations";
 import { SectionHeading } from "@/components/SectionHeading";
 import { getProjectBySlug, projects } from "@/data/siteContent";
 
 type ProjectDetailPageProps = {
-  params: {
-    slug: string;
-  };
+  params: Promise<{ slug: string }>;
 };
 
 export function generateStaticParams() {
   return projects.map((project) => ({ slug: project.slug }));
 }
 
-export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
-  const project = getProjectBySlug(params.slug);
+export default async function ProjectDetailPage({ params }: ProjectDetailPageProps) {
+  const { slug } = await params;
+  const project = getProjectBySlug(slug);
 
   if (!project) {
     notFound();
@@ -26,9 +25,7 @@ export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
     <section className="page-section">
       <div className="container project-detail-layout">
         <div>
-          <Link href="/projects" className="back-link">
-            ← 返回项目列表
-          </Link>
+          <BackButton />
           <SectionHeading
             eyebrow={project.company}
             title={project.title}

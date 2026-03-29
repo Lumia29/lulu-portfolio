@@ -1244,6 +1244,11 @@ main {
   margin-top: 18px;
   font-weight: 700;
   color: var(--primary-strong);
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  font: inherit;
 }
 
 .experiments-home-grid {

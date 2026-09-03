@@ -1,65 +1,47 @@
 import Image from "next/image";
 
-import { contact } from "@/data/siteContent";
+import { contact, resumeIsPublic } from "@/data/siteContent";
 
-export function ContactPanel() {
+function WechatCard({ mobileDisclosure = false }: { mobileDisclosure?: boolean }) {
+  const qr = (
+    <div className="wechat-qr-frame">
+      <Image src={contact.wechatQr} alt="刘露露微信二维码，扫码添加微信" width={884} height={868} className="wechat-qr-image" />
+    </div>
+  );
+
+  if (mobileDisclosure) {
+    return (
+      <details className="wechat-mobile-disclosure">
+        <summary>微信联系 <span aria-hidden="true">＋</span></summary>
+        <p>扫码添加微信，适合快速确认岗位信息与后续沟通。</p>
+        {qr}
+      </details>
+    );
+  }
+
   return (
-    <div className="contact-layout">
-      <article className="contact-card surface-card">
-        <span className="section-eyebrow">Open To</span>
-        <div className="contact-copy-stack">
-          <div className="contact-hero">
-            <h3 className="contact-title-desktop">岗位机会、项目合作，或围绕 AI 产品方向的交流。</h3>
-            <h3 className="contact-title-mobile">欢迎联系我</h3>
-          </div>
-          <p className="contact-intro contact-intro-desktop">
-            如果你在招 AI 产品或交流 AIGC 产品与 AI 应用相关问题，欢迎联系我。带上岗位信息、项目阶段或你想讨论的问题，
-            会更高效~
-          </p>
-          <p className="contact-intro contact-intro-mobile">岗位机会、项目合作或交流</p>
-        </div>
-        <div className="contact-list">
-          <div className="contact-row contact-phone-row">
-            <span className="contact-row-label">手机</span>
-            <strong>{contact.phone}</strong>
-          </div>
-          <a className="contact-row contact-row-link" href={`mailto:${contact.email}`}>
-            <span className="contact-row-label">邮箱</span>
-            <strong>{contact.email}</strong>
-          </a>
-        </div>
-        <div className="contact-actions">
-          <a href={contact.resumeLink} className="button button-primary" target="_blank" rel="noreferrer">
-            查看简历
-          </a>
-          <a href={`mailto:${contact.email}`} className="button button-secondary contact-email-btn">
-            发邮件
-          </a>
-        </div>
-      </article>
+    <div className="wechat-inline">
+      <div><span className="section-eyebrow">WeChat</span><strong>扫码添加微信</strong><p>适合快速确认岗位信息与后续沟通。</p></div>
+      {qr}
+    </div>
+  );
+}
 
-      <article className="wechat-card surface-card">
-        <span className="section-eyebrow">WeChat</span>
-        <div className="contact-copy-stack">
-          <div className="wechat-head">
-            <div className="wechat-badge">
-              <strong>扫码添加微信</strong>
-              <p>适合快速确认岗位信息、合作意向和后续沟通。</p>
-            </div>
-          </div>
+export function ContactPanel({ page = false }: { page?: boolean }) {
+  return (
+    <div className={`contact-layout ${page ? "is-page" : ""}`}>
+      <article className="contact-card surface-card">
+        <span className="section-eyebrow">Open to conversations</span>
+        <h3>欢迎直接聊聊具体岗位、项目或产品问题。</h3>
+        <p>岗位机会、项目合作，或围绕 AI 产品、AI 策略与模型评测的交流都可以。</p>
+        <a className="contact-email" href={`mailto:${contact.email}`}>{contact.email}</a>
+        <div className="contact-actions">
+          <a href={`mailto:${contact.email}`} className="button button-primary">发邮件</a>
+          {resumeIsPublic ? <a href={contact.resumeLink} className="button button-secondary" target="_blank" rel="noreferrer">查看简历</a> : null}
         </div>
-        <div className="wechat-qr-shell">
-          <div className="wechat-qr-frame">
-            <Image
-              src="/images/wechat-qr.jpg"
-              alt="刘露露微信二维码，扫码添加微信"
-              width={884}
-              height={868}
-              className="wechat-qr-image"
-            />
-          </div>
-        </div>
+        <WechatCard mobileDisclosure />
       </article>
+      <aside className="wechat-card surface-card"><WechatCard /></aside>
     </div>
   );
 }

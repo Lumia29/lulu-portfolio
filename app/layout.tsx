@@ -8,8 +8,15 @@ import { siteMeta } from "@/data/siteContent";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: `${siteMeta.name} | AI 产品作品集`,
+  metadataBase: new URL("https://lululiu.cn"),
+  title: `${siteMeta.name} | ${siteMeta.title}`,
   description: siteMeta.description,
+  openGraph: {
+    title: `${siteMeta.name} | ${siteMeta.title}`,
+    description: siteMeta.description,
+    type: "website",
+    locale: "zh_CN",
+  },
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {

@@ -1,72 +1,48 @@
+import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 
-import { BackButton } from "@/components/BackButton";
-import { ProjectCover } from "@/components/Illustrations";
-import { SectionHeading } from "@/components/SectionHeading";
-import { getProjectBySlug, projects } from "@/data/siteContent";
+import { AnalyzerCaseStudy } from "@/components/case-study/AnalyzerCaseStudy";
+import { HuiwaCaseStudy } from "@/components/case-study/HuiwaCaseStudy";
+import { RiskGovernanceCaseStudy } from "@/components/case-study/RiskGovernanceCaseStudy";
+import type { CaseStudyBackLink } from "@/components/case-study/CaseStudyLayout";
+import { featuredProjects } from "@/data/siteContent";
 
-type ProjectDetailPageProps = {
+const studies = {
+  "ai-job-match-analyzer": AnalyzerCaseStudy,
+  "ai-risk-governance": RiskGovernanceCaseStudy,
+  "huiwa-aigc": HuiwaCaseStudy,
+};
+
+type Slug = keyof typeof studies;
+type Props = {
   params: Promise<{ slug: string }>;
+  searchParams?: Promise<{ from?: string | string[] }>;
 };
 
 export function generateStaticParams() {
-  return projects.map((project) => ({ slug: project.slug }));
+  return Object.keys(studies).map((slug) => ({ slug }));
 }
 
-export default async function ProjectDetailPage({ params }: ProjectDetailPageProps) {
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
-  const project = getProjectBySlug(slug);
+  const project = featuredProjects.find((item) => item.slug === slug);
+  if (!project) return {};
+  return {
+    title: `${project.title} | 刘露露`,
+    description: project.oneLiner,
+    alternates: { canonical: `/projects/${project.slug}` },
+    openGraph: { title: project.title, description: project.oneLiner, type: "article" },
+  };
+}
 
-  if (!project) {
-    notFound();
-  }
-
-  return (
-    <section className="page-section">
-      <div className="container project-detail-layout">
-        <div>
-          <BackButton />
-          <SectionHeading
-            eyebrow={project.company}
-            title={project.title}
-            description={project.oneLiner}
-          />
-          <div className="project-detail-card surface-card">
-            <h3>背景</h3>
-            <p>{project.background}</p>
-            <h3>我的角色</h3>
-            <p>{project.role}</p>
-            <h3>行动</h3>
-            <ul className="bullet-list">
-              {project.actions.map((item) => (
-                <li key={item}>{item}</li>
-              ))}
-            </ul>
-            <h3>结果</h3>
-            <ul className="bullet-list">
-              {project.results.map((item) => (
-                <li key={item}>{item}</li>
-              ))}
-            </ul>
-            <h3>关键洞察</h3>
-            <p>{project.insight}</p>
-          </div>
-        </div>
-        <aside className="project-detail-side">
-          <div className="surface-card sticky-card">
-            <div className="project-cover detail-cover">
-              <ProjectCover cover={project.cover} />
-            </div>
-            <div className="tag-row">
-              {project.tags.map((tag) => (
-                <span key={tag} className="tag">
-                  {tag}
-                </span>
-              ))}
-            </div>
-          </div>
-        </aside>
-      </div>
-    </section>
-  );
+export default async function ProjectDetailPage({ params, searchParams }: Props) {
+  const { slug } = await params;
+  const fromParam = (await searchParams)?.from;
+  const source = Array.isArray(fromParam) ? fromParam[0] : fromParam;
+  const Study = studies[slug as Slug];
+  if (!Study) notFound();
+  const backLink: CaseStudyBackLink = source === "home"
+    ? { href: "/", label: "返回首页" }
+    : { href: "/projects", label: "返回项目" };
+  return <div className="case-study-page"><Study backLink={backLink} /></div>;
 }

@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-import { contact, navigation, siteMeta } from "@/data/siteContent";
+import { contact, navigation, resumeIsPublic, siteMeta } from "@/data/siteContent";
 
 export function SiteFooter() {
   return (
@@ -8,28 +8,17 @@ export function SiteFooter() {
       <div className="container footer-grid">
         <div className="footer-brand">
           <p className="footer-kicker">Lulu Liu</p>
-          <h3>把 AI 做得更像真实工作里好用的工具。</h3>
+          <h3>把复杂问题，变成清晰、可信、可落地的 AI 产品。</h3>
           <p>{siteMeta.description}</p>
         </div>
         <div className="footer-column">
           <p className="footer-label">Navigate</p>
-          <div className="footer-links">
-            {navigation.map((item) => (
-              <Link key={item.href} href={item.href}>
-                {item.label}
-              </Link>
-            ))}
-          </div>
+          {navigation.map((item) => <Link key={item.href} href={item.href}>{item.label}</Link>)}
         </div>
         <div className="footer-column">
           <p className="footer-label">Contact</p>
           <a href={`mailto:${contact.email}`}>{contact.email}</a>
-          <a href={contact.resumeLink} target="_blank" rel="noreferrer">
-            查看简历
-          </a>
-          <a href={contact.github} target="_blank" rel="noreferrer">
-            GitHub
-          </a>
+          {resumeIsPublic ? <a href={contact.resumeLink} target="_blank" rel="noreferrer">查看简历</a> : null}
         </div>
       </div>
     </footer>

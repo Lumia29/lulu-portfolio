@@ -1,85 +1,33 @@
+import type { Metadata } from "next";
+
 import { PortraitPanel } from "@/components/PortraitPanel";
 import { SectionHeading } from "@/components/SectionHeading";
-import { SkillRadar } from "@/components/SkillRadar";
-import { about } from "@/data/siteContent";
+import { about, careerExperiences, contact, resumeIsPublic } from "@/data/siteContent";
+
+export const metadata: Metadata = { title: "关于 | 刘露露", description: "从设计与用户现场，到模型评测、AI 风险策略、Agent / Workflow 与独立 AI 产品构建。" };
 
 export default function AboutPage() {
   return (
-    <section className="page-section">
+    <section className="page-section about-page">
       <div className="container">
-        <SectionHeading
-          eyebrow="About"
-          title="关于我"
-          description="从设计训练到用户运营、增长、AIGC 评测，再到模型运营，这段路径让我逐步把体验判断、业务理解和复杂系统落地连接成一套更完整的方法。"
-        />
-
+        <SectionHeading eyebrow="ABOUT" title="我如何形成现在的 AI 产品与策略方法" description="我把体验判断、业务理解、模型评测和产品化实践逐步连接起来，形成现在解决 AI 应用问题的方法。" />
         <div className="about-page-grid">
-          <div className="about-main-stack">
-            <article className="surface-card prose-card">
-              <h3>开场白</h3>
-              <p>{about.intro}</p>
-            </article>
-
-            <article className="surface-card prose-card">
-              <h3>我的背景</h3>
-              <p>{about.education}</p>
-              <div className="experience-list">
-                {about.experiences.map((item) => (
-                  <div key={item.company} className="experience-row">
-                    <div>
-                      <span>{item.period}</span>
-                      <h4>{item.company}</h4>
-                    </div>
-                    <div>
-                      <strong>{item.role}</strong>
-                      <p>{item.detail}</p>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </article>
-
-            <article className="surface-card prose-card">
-              <h3>技能栈</h3>
-              <div className="two-column-tags">
-                <div>
-                  <h4>硬核能力</h4>
-                  <div className="tag-row">
-                    {about.hardSkills.map((skill) => (
-                      <span key={skill} className="tag">
-                        {skill}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-                <div>
-                  <h4>软实力</h4>
-                  <div className="tag-row">
-                    {about.softSkills.map((skill) => (
-                      <span key={skill} className="tag">
-                        {skill}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-              </div>
-            </article>
-
-            <article className="surface-card prose-card">
-              <h3>工作理念</h3>
-              <p>{about.philosophy}</p>
-              <ul className="bullet-list">
-                {about.beyondWork.map((item) => (
-                  <li key={item}>{item}</li>
-                ))}
-              </ul>
-            </article>
+          <div className="about-story">
+            <p className="about-story-lead">{about.intro}</p>
+            {about.story.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
+            <blockquote>{about.method}</blockquote>
+            <div className="about-actions">{resumeIsPublic ? <a href={contact.resumeLink} className="button button-primary" target="_blank" rel="noreferrer">查看简历</a> : null}<a href={`mailto:${contact.email}`} className="button button-secondary">联系我</a></div>
           </div>
-
-          <div className="about-side-stack">
-            <PortraitPanel />
-            <SkillRadar items={about.radar} />
-          </div>
+          <PortraitPanel />
+        </div>
+        <div className="career-timeline">
+          {careerExperiences.map((item, index) => (
+            <article key={`${item.company}-${item.role}`}>
+              <span className="timeline-index">0{index + 1}</span>
+              <div><span>{item.period}</span><h3>{item.company}</h3></div>
+              <div><strong>{item.role}</strong><p>{item.detail}</p></div>
+            </article>
+          ))}
         </div>
       </div>
     </section>

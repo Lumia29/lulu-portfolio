@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 
 import { CapabilityEvidence } from "@/components/CapabilityEvidence";
@@ -6,6 +7,10 @@ import { FeaturedProjectCard } from "@/components/FeaturedProjectCard";
 import { HeroSection } from "@/components/HeroSection";
 import { SectionHeading } from "@/components/SectionHeading";
 import { about, careerExperiences, featuredProjects } from "@/data/siteContent";
+
+export const metadata: Metadata = {
+  alternates: { canonical: "/" },
+};
 
 export default function HomePage() {
   return (

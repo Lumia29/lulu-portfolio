@@ -4,13 +4,17 @@ import { PortraitPanel } from "@/components/PortraitPanel";
 import { SectionHeading } from "@/components/SectionHeading";
 import { about, careerExperiences, contact, resumeIsPublic } from "@/data/siteContent";
 
-export const metadata: Metadata = { title: "关于 | 刘露露", description: "从设计与用户现场，到模型评测、AI 风险策略、Agent / Workflow 与独立 AI 产品构建。" };
+export const metadata: Metadata = {
+  title: "关于 | 刘露露",
+  description: "从设计与用户现场，到模型评测、AI 风险策略、Agent / Workflow 与独立 AI 产品构建。",
+  alternates: { canonical: "/about" },
+};
 
 export default function AboutPage() {
   return (
     <section className="page-section about-page">
       <div className="container">
-        <SectionHeading eyebrow="ABOUT" title="我如何形成现在的 AI 产品与策略方法" description="我把体验判断、业务理解、模型评测和产品化实践逐步连接起来，形成现在解决 AI 应用问题的方法。" />
+        <SectionHeading as="h1" eyebrow="ABOUT" title="我如何形成现在的 AI 产品与策略方法" description="我把体验判断、业务理解、模型评测和产品化实践逐步连接起来，形成现在解决 AI 应用问题的方法。" />
         <div className="about-page-grid">
           <div className="about-story">
             <p className="about-story-lead">{about.intro}</p>

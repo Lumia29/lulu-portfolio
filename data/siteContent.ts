@@ -38,7 +38,7 @@ export type Experience = {
 export const siteMeta = {
   name: "刘露露",
   title: "AI 产品 / AI 策略作品集",
-  description: "AI 产品与策略实践者，现任字节跳动大模型机审运营，实践覆盖 AI 风险策略、Agent / Workflow、AIGC 产品评测与独立 AI 产品构建。",
+  description: "AI 产品与策略实践者，现任字节跳动模型运营，实践覆盖 AI 风险策略、Agent / Workflow、AIGC 产品评测与独立 AI 产品构建。",
 };
 
 export const navigation: NavItem[] = [
@@ -109,7 +109,7 @@ export const featuredProjects: FeaturedProject[] = [
     number: "02",
     title: "AI 风险治理工具闭环",
     organization: "字节跳动",
-    role: "大模型机审运营 · AI 策略与 Workflow 实践",
+    role: "模型运营 · AI 策略与 Workflow 实践",
     oneLiner: "识别风险治理中的重复流程，用 Agent、Workflow、规则与人工节点重构归因、策略和验证链路。",
     result: "将多个实际工具与治理流程抽象为可复用闭环",
     tags: ["AI Strategy", "Agent / Workflow", "Evaluation"],
@@ -144,7 +144,7 @@ export const careerExperiences: Experience[] = [
   {
     company: "字节跳动",
     period: "2025.07 — 至今",
-    role: "大模型机审运营",
+    role: "模型运营",
     detail: "在真实商业风险场景中进行 AI 风险策略、Agent / Workflow 和模型优化实践。",
   },
   {

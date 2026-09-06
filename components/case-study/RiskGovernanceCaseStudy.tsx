@@ -15,7 +15,7 @@ const toc = [
 export function RiskGovernanceCaseStudy({ backLink }: { backLink: CaseStudyBackLink }) {
   return (
     <>
-      <div className="container"><CaseStudyHero eyebrow="ENTERPRISE AI PRACTICE" title="AI 风险治理工具闭环" definition="从多个真实治理工具与流程中，抽象出风险归因、策略生成、模型优化与验证的连续闭环。" role="大模型机审运营 · AI 策略、Agent / Workflow 与治理流程实践" tags={["Risk Strategy", "Agent / Workflow", "Human in the Loop"]} backLink={backLink}><RiskProcessVisual /></CaseStudyHero></div>
+      <div className="container"><CaseStudyHero eyebrow="ENTERPRISE AI PRACTICE" title="AI 风险治理工具闭环" definition="从多个真实治理工具与流程中，抽象出风险归因、策略生成、模型优化与验证的连续闭环。" role="模型运营 · AI 策略、Agent / Workflow 与治理流程实践" tags={["Risk Strategy", "Agent / Workflow", "Human in the Loop"]} backLink={backLink}><RiskProcessVisual /></CaseStudyHero></div>
       <CaseStudyLayout toc={toc} next={{ href: "/projects/huiwa-aigc", label: "绘蛙 AIGC 产品评测与优化" }}>
         <CaseSection id="problem" number="01" eyebrow="Business Problem" title="真实风险治理不是单点识别，而是多目标约束" intro="风险信号分散在不同内容与场景中，治理既要识别问题，也要同时考虑召回、误伤、审核成本与可落地性。">
           <div className="constraint-strip"><div><span>识别</span><p>从多模态内容和上下文中找到真实风险。</p></div><div><span>策略</span><p>把判断转成可执行、可验证的机审策略。</p></div><div><span>验证</span><p>持续检查误伤、漏判与模型变化。</p></div></div>

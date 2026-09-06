@@ -90,7 +90,9 @@ main { position:relative; z-index:1; }
 .hero-section { padding:58px 0 100px; }
 .hero-grid { display:grid; grid-template-columns:minmax(0,7fr) minmax(340px,5fr); align-items:center; gap:72px; }
 .hero-copy { animation:hero-rise .7s ease both; }
-.hero-copy h1 { max-width:720px; margin:24px 0; font-family:"Baskerville","Times New Roman","Songti SC",serif; font-size:clamp(3.55rem,4.6vw,5rem); font-weight:500; line-height:1.02; letter-spacing:-.055em; text-wrap:balance; }
+.hero-copy h1 { max-width:720px; margin:24px 0 14px; font-family:"Baskerville","Times New Roman","Songti SC",serif; font-size:clamp(3.55rem,4.2vw,4.2rem); font-weight:500; line-height:1.02; letter-spacing:-.055em; text-wrap:balance; }
+.hero-greeting,.hero-name { display:inline-block; white-space:nowrap; }
+.hero-positioning { max-width:680px; margin:0 0 20px; color:#37435b; font-family:"Baskerville","Times New Roman","Songti SC",serif; font-size:clamp(1.8rem,2.15vw,2.15rem); font-weight:500; line-height:1.28; letter-spacing:-.035em; text-wrap:balance; }
 .hero-intro { max-width:680px; margin:0; color:#59657d; font-size:1.13rem; line-height:1.95; }
 .identity-tags { display:flex; flex-wrap:wrap; gap:9px; margin-top:26px; }
 .identity-tags span { padding:9px 13px; border:1px solid rgba(88,112,216,.13); border-radius:999px; background:rgba(255,255,255,.72); color:#4e5a73; font-size:.82rem; font-weight:800; }
@@ -547,7 +549,8 @@ main { position:relative; z-index:1; }
   .section-heading-action { margin-top:16px; }
   .hero-section { padding:34px 0 72px; }
   .hero-grid { gap:36px; }
-  .hero-copy h1 { margin:15px 0; font-size:2.94rem; line-height:1; text-wrap:pretty; }
+  .hero-copy h1 { margin:15px 0 10px; font-size:2.68rem; line-height:1.02; text-wrap:balance; }
+  .hero-positioning { margin-bottom:15px; font-size:1.65rem; line-height:1.28; text-wrap:pretty; }
   .hero-intro { font-size:1rem; line-height:1.8; }
   .identity-tags { margin-top:20px; }
   .hero-method { margin-top:24px; font-size:1.05rem; }

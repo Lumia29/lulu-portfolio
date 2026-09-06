@@ -8,10 +8,11 @@ export function HeroSection() {
       <div className="container hero-grid">
         <div className="hero-copy">
           <span className="hero-kicker">AI PRODUCT · AI STRATEGY · MODEL EVALUATION</span>
-          <h1>把复杂业务问题，转化为可验证、可落地的 AI 产品与策略。</h1>
-          <p className="hero-intro">现任字节跳动大模型机审运营，实践覆盖 AI 风险策略、Agent / Workflow、AIGC 产品评测与独立 AI 产品构建。</p>
+          <h1><span className="hero-greeting">你好，我是</span><span className="hero-name">刘露露&nbsp;👋🏻</span></h1>
+          <p className="hero-positioning">把复杂业务问题，转化为可验证、可落地的 AI 产品与策略。</p>
+          <p className="hero-intro">现任字节跳动模型运营，实践覆盖 AI 风险策略、Agent / Workflow、AIGC 产品评测与独立 AI 产品构建。</p>
           <div className="identity-tags" aria-label="身份标签">
-            <span>大模型机审运营</span>
+            <span>模型运营</span>
             <span>AI 产品与策略实践</span>
             <span>独立 AI 产品构建</span>
           </div>
